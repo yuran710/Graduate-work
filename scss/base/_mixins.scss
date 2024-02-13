@@ -1,0 +1,30 @@
+@mixin headerBtn {
+  border-radius: 3px;
+  color: $white;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 13px;
+  margin-right: 14px;
+  transition: all .4s;
+  
+  &:hover {
+  //   opacity: 0.6;
+  // }
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 0.85;
+}
+  & img {
+    margin-right: 10px;
+  }
+}
+
+@mixin mediaTablet {
+  @media screen and (max-width:$tablet) {
+    @content;
+  }
+}
+@mixin mediaMobile {
+  @media screen and (max-width:$mobile) {
+    @content;
+  }
+}

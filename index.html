@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Окна Хаус</title>
+  <link rel="icon" href="img/header/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="body">
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="header__top-inner">
+            <a class="header__logo" href="#">
+              <img src="img/header/logo.svg" alt="">
+            </a>
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="">
+                    Услуги
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="">
+                    Продукция
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="">
+                    О компании
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="">
+                    Портфолио
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="">
+                    Вопрос-ответ
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__buttons">
+              <button class="header__measuring-btn">
+                <img src="img/header/ruler.svg" alt="">
+                Заявка на замер
+              </button>
+              <button class="header__calculation-btn">
+                <img src="img/header/calculator.svg" alt="">
+                Заказать расчет
+              </button>
+            </div>
+            <div class="header__nav-btn">
+              <a class="burger-icon-btn" href="#">
+                <div class="burger-icon"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main"></main>
+    <footer class="footer"></footer>
+  </div>
+  <div class="modal">
+    <div class="modal__window">
+      <a class="modal__cancel" href="#">
+        <svg width="22.508057" height="22.507812" viewBox="0 0 22.5081 22.5078" fill="none"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path id="Vector 15" d="M21.504 1.00391L1.00403 21.5039M1.00403 1.00391L21.504 21.5039" stroke="#FFFFFF"
+            stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <div class="modal__title-img">
+        <img class="modal__img" src="img/header/ruler.svg" alt="">
+        <h3 class="modal__title">
+          Вызвать замерщика на дом
+        </h3>
+      </div>
+      <form class="modal__form">
+        <input class="modal__form-input" type="text" placeholder="Ваше имя">
+        <input data-tel-input class="modal__form-input" type="text" placeholder="Номер телефона">
+        <input class="modal__form-input" type="email" placeholder="E-mail">
+        <div class="modal__form-checkbox">
+          <label class="modal__checkbox-label">
+            <input class="modal__checkbox-input" type="checkbox" name="coding-notes">
+            <span class="custom__checkbox"></span>
+            Я согласен(на) на обработку<a class="modal__checkbox-link" href="#">персональных данных</a>
+          </label>
+        </div>
+        <button class="modal__button">
+          Отправить заявку
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="modaltwo">
+    <div class="modaltwo__window">
+      <a class="modaltwo__cancel" href="#">
+        <svg width="22.508057" height="22.507812" viewBox="0 0 22.5081 22.5078" fill="none"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path id="Vector 15" d="M21.504 1.00391L1.00403 21.5039M1.00403 1.00391L21.504 21.5039" stroke="#FFFFFF"
+            stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <div class="modaltwo__title-img">
+        <img class="modaltwo__img" src="img/header/calculator.svg" alt="">
+        <h3 class="modaltwo__title">
+          Заказать расчет
+        </h3>
+      </div>
+      <form class="modaltwo__form">
+        <input class="modaltwo__form-input" type="text" placeholder="Ваше имя">
+        <input data-tel-input class="modaltwo__form-input" type="text" placeholder="Номер телефона">
+        <input class="modaltwo__form-input" type="email" placeholder="E-mail">
+        <div class="modaltwo__form-checkbox">
+          <label class="modaltwo__checkbox-label">
+            <input class="modaltwo__checkbox-input" type="checkbox" name="coding-notes">
+            <span class="custom__checkbox-2"></span>
+            Я согласен(на) на обработку<a class="modaltwo__checkbox-link" href="#">персональных данных</a>
+          </label>
+        </div>
+        <button class="modaltwo__button">
+          Отправить заявку
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./libs/phonMask/mask.js"></script>
+  <script src="./libs/phonMask/mask_list.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

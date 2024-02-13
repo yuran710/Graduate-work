@@ -1,0 +1,65 @@
+.burger-icon-btn {
+  --time: 0.1s;
+  --width: 40px;
+  --height: 30px;   
+  --line-height: 1px;
+  --line-margin: 2;
+  --color: #000000;
+
+
+  height: var(--height);
+  width: var(--width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.burger-icon::before,
+.burger-icon::after {
+  content: '';
+  display: block;
+
+  position: absolute;
+  left: 0;
+
+  width: var(--width);
+  height: var(--line-height);
+
+  background-color: var(--color);
+  transition: tranaform var(--time) ease-in,
+    top var(--time) linear var(--time);
+}
+
+.burger-icon::before {
+  top: calc(var(--line-height) * -8);
+}
+
+.burger-icon::after {
+  top: calc(var(--line-height) * 8);
+}
+
+.burger-icon.burger-icon--active {
+  background-color: transparent;
+}
+
+.burger-icon.burger-icon--active::before,
+.burger-icon.burger-icon--active::after {
+  top: 0;
+  transition: top var(--time) linear,
+    transform var(--time) ease-in var(--time);
+}
+
+.burger-icon.burger-icon--active::before {
+  transform: rotate(45deg);
+}
+
+.burger-icon.burger-icon--active::after {
+  transform: rotate(-45deg);
+}

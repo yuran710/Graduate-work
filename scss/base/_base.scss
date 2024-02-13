@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+        url("../../fonts/Roboto-Bold.woff2") format('woff2'),
+        url("./../fonts/Roboto-Bold.woff") format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Regular'), local('Roboto-Regular'),
+        url("../../fonts/Roboto-Regular.woff2") format('woff2'),
+        url("./../fonts/Roboto-Regular.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Light'), local('Roboto-Light'),
+        url("../../fonts/Roboto-Light.woff2") format('woff2'),
+        url("./../fons/Roboto-Light.woff") format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Thin'), local('Roboto-Thin'),
+        url("../../fonts/Roboto-Thin.woff2") format('woff2'),
+        url("./../fonts/Roboto-Thin.woff") format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+.body {
+    font-family: $font-accent;
+    background-color: $color-bg;
+    font-weight: 400;
+    color: $accent;
+    line-height: 1.5;
+}
+
+.body--modal-opened {
+    overflow: hidden;
+}
+.body--modaltwo-opened {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1230px;
+    height: 100%;
+}
+
+.none {
+    display: none !important;
+}
+
+.title-2 {
+    font-size: 36px;
+    font-family: $font-accent;
+    color: $accent;
+    font-weight: 700;
+
+    @include mediaTablet {
+        font-size: 28px;
+    }
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
