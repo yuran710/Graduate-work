@@ -7,6 +7,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Roboto';
     src: local('Roboto Regular'), local('Roboto-Regular'),
@@ -16,6 +17,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Roboto';
     src: local('Roboto Light'), local('Roboto-Light'),
@@ -25,6 +27,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Roboto';
     src: local('Roboto Thin'), local('Roboto-Thin'),
@@ -46,6 +49,7 @@
 .body--modal-opened {
     overflow: hidden;
 }
+
 .body--modaltwo-opened {
     overflow: hidden;
 }
@@ -63,6 +67,10 @@
     padding: 0 15px;
     max-width: 1230px;
     height: 100%;
+
+    &--sm {
+        max-width: 1077px;
+    }
 }
 
 .none {
@@ -82,4 +90,14 @@
 
 .no-scroll {
     overflow-y: hidden;
+}
+
+.measuring-btn {
+    background-color: $orange;
+    @include headerBtn;
+}
+
+.calculation-btn {
+    background: $purple;
+    @include headerBtn;
 }

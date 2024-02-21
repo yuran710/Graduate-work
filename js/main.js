@@ -29,7 +29,7 @@ phoneInputs.forEach((input)=>{
 /* Modal Window */ 
 
 const modal = document.querySelector('.modal')
-const modalButton = document.querySelector('.header__measuring-btn')
+const modalButton = document.querySelector('.measuring-btn')
 
 modalButton.addEventListener('click', openModal)
 modal.addEventListener('click', closeModal)
@@ -51,7 +51,7 @@ function closeModal(e) {
 }
 
 const modaltwo = document.querySelector('.modaltwo')
-const modaltwoButton = document.querySelector('.header__calculation-btn')
+const modaltwoButton = document.querySelector('.calculation-btn')
 
 modaltwoButton.addEventListener('click', openModaltwo)
 modaltwo.addEventListener('click', closeModaltwo)
