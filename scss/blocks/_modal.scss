@@ -1,7 +1,7 @@
-.modal {
+.windows__modal {
   position: fixed;
   inset: 0;
-  z-index: 10;
+  z-index: 15;
   background: $muted;
 
   display: flex;
@@ -11,9 +11,6 @@
   opacity: 0;
   visibility: hidden;
   transition: $transition;
-
-
-
 }
 
 .body--modal-opened .modal {
@@ -52,7 +49,7 @@
   }
 }
 
-.modal__title-img {
+.title__img {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
@@ -64,18 +61,18 @@
   margin-right: 26px;
 }
 
-.modal__title {
+.title__modal {
   @include fontSetContent(700, 24px, $white);
   line-height: 1.25;
 }
 
-.modal__form {
+.form__modal {
   display: flex;
   gap: 21px;
   flex-direction: column;
 }
 
-.modal__form-input {
+.form__input {
   height: 52px;
   color: $placeholder;
   display: block;

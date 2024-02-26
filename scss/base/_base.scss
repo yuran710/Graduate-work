@@ -54,6 +54,20 @@
     overflow: hidden;
 }
 
+.body--window-opened {
+    overflow: hidden;
+}
+
+.body--logia-opened {
+    overflow: hidden;
+}
+.body--house-opened {
+    overflow: hidden;
+}
+.body--corporate-opened {
+    overflow: hidden;
+}
+
 .wrapper {
     min-height: 100%;
     width: 100%;
@@ -78,10 +92,8 @@
 }
 
 .title-2 {
-    font-size: 36px;
-    font-family: $font-accent;
-    color: $accent;
-    font-weight: 700;
+    @include fontSetContent(700, 24px, $accent);
+    text-align: center;
 
     @include mediaTablet {
         font-size: 28px;
@@ -92,12 +104,12 @@
     overflow-y: hidden;
 }
 
-.measuring-btn {
+.measuring__button {
     background-color: $orange;
     @include headerBtn;
 }
 
-.calculation-btn {
+.calculation__button {
     background: $purple;
     @include headerBtn;
 }

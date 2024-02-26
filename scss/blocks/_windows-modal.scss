@@ -1,0 +1,108 @@
+.modal__services {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: $muted-modal;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition;
+}
+
+.window__modal-content {
+  @include modalContent;
+  background: linear-gradient(156.56deg,
+      rgb(255, 255, 255) 47.215%,
+      rgba(255, 255, 255, 0) 210.306%,
+      rgb(255, 255, 255) 300.569%),
+    url("./../img/modal/window.jpeg") 100% 100% no-repeat;
+}
+
+.modal__services-cancel {
+  position: absolute;
+  top: 25px;
+  right: 19px;
+
+  & path {
+    stroke: $dark;
+    transition: $transition;
+  }
+
+  &:hover path {
+    stroke: $muted;
+  }
+}
+
+.body--window-opened .window__modal {
+@include bodyOpened;
+}
+
+.body--window-opened .window__modal-content {
+  @include bodyContent;
+}
+
+.modal__top {
+  display: flex;
+  gap: 92px;
+}
+
+.modal__services-img {
+  margin-bottom: 36px;
+}
+
+.img__modal {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.modal__inner {
+  margin-top: 10px;
+}
+
+.modal__services-title {
+  @include fontSetContent(700, 24px, $accent);
+  margin-bottom: 23px;
+}
+
+.modal__text {
+  color: $dark;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.buttons {
+  display: flex;
+}
+
+.modal__main {
+  display: flex;
+  gap: 34px;
+}
+
+.modal__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 42px;
+  min-width: 362px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main__title {
+  @include fontSetContent(700, 14px, $accent);
+  margin-left: 34px;
+}
+
+.text__left {
+  margin-left: 18px;
+}
+
+.text__modal {
+  @include fontSetContent(400, 13px, $dark);
+}

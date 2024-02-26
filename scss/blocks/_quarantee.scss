@@ -96,63 +96,6 @@
   }
 }
 
-.checkbox {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-
-  &__mark {
-    opacity: 0;
-  }
-
-  &__label {
-    @include fontSetContent(400, 12px, $dark);
-    text-align: left;
-    position: relative;
-    padding-left: 10px;
-    line-height: 1.2;
-
-    &::after,
-    &::before {
-      position: absolute;
-      display: inline-block;
-    }
-
-    &::before {
-      content: "";
-      height: 25px;
-      width: 25px;
-      background-color: $input;
-      border-radius: 3px;
-      top: 2px;
-      left: -24px;
-    }
-
-    &::after {
-      content: url('./../img/main/check.svg');
-      left: -20px;
-      top: 0;
-
-    }
-  }
-
-  &__link {
-    color: $link;
-
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-
-}
-
-.checkbox .checkbox__mark+.checkbox__label::after {
-  content: none;
-}
-
-.checkbox .checkbox__mark:checked+.checkbox__label::after {
-  content: url('./../img/main/check.svg');
-}
 .quarantee__button {
   @include fontSetContent(700, 14px, $white);
   width: 199px;

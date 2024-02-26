@@ -20,6 +20,27 @@
   color: $color;
 }
 
+@mixin modalContent {
+  position: relative;
+  display: inline-block;
+  padding: 49px 138px 42px 109px;
+  border-radius: 10px;
+  gap: 92px;
+  transition: all .8s;
+  opacity: 0;
+  transform: translate(0px, -100%);
+}
+
+@mixin bodyOpened {
+  opacity: 1;
+  visibility: visible;
+}
+@mixin bodyContent {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+
 @mixin mediaTablet {
   @media screen and (max-width:$tablet) {
     @content;
@@ -30,3 +51,4 @@
     @content;
   }
 }
+
