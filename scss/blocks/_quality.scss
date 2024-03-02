@@ -1,0 +1,57 @@
+.quality {
+  padding-bottom: 46px;
+
+  &__inner {
+    background:
+      linear-gradient(180deg,
+        rgba(51, 51, 73, 0.96) 50%,
+      ),
+      url("./../img/quality/bg-image.jpeg");
+    height: 436px;
+    border-radius: 3px;
+  }
+
+  &__logo {
+    padding-top: 10px;
+    text-align: center;
+
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    justify-content: center;
+    margin-top: 55px;
+
+  }
+
+  &__text {
+    color: $white;
+    margin-top: 32px;
+  }
+
+  &__text-top {
+    margin-top: 45px;
+  }
+
+  &__button {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 56px;
+    @include fontSetContent(700, 16px, $white);
+    padding: 17px 54px 17px 34px;
+    background: $purple;
+    border-radius: 3px;
+    transition: $transition;
+
+    &:hover {
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+      opacity: 0.85;
+    }
+
+    & img {
+      margin-right: 22px;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-/* Burger Menu */ 
+/* Burger Menu */
 
 // const burgerBtn = document.querySelector('.burger-icon-btn');
 // const burgerIcon = document.querySelector('.burger-icon');
@@ -11,27 +11,27 @@
 //   document.body.classList.toggle('.no-scroll');
 // }
 
-/* Phon Mask */ 
+/* Phon Mask */
 
 mask('[data-tel-input]');
 
 const phoneInputs = document.querySelectorAll('[data-tel-input]');
-phoneInputs.forEach((input)=>{
-  input.addEventListener('input', ()=>{
+phoneInputs.forEach((input) => {
+  input.addEventListener('input', () => {
     if (input.value == '+') input.value = '';
   })
-  input.addEventListener('blur', ()=>{
+  input.addEventListener('blur', () => {
     if (input.value == '+') input.value = '';
   })
 
 });
 
-/* Modal Window */ 
+/* Modal Window */
 
 const modal = document.querySelector('.modal');
 const modalButtons = document.querySelectorAll('.measuring__btn');
 
-modalButtons.forEach(function(button) {
+modalButtons.forEach(function (button) {
   button.addEventListener('click', openModal);
 });
 
@@ -45,17 +45,20 @@ function openModal(e) {
 function closeModal(e) {
   const target = e.target;
 
-  if (target.closest('.modal__cancel') || target.classList.contains('modal')) {
+  if (target.closest('.modal__cancel')) {
+    e.preventDefault();
+    document.body.classList.remove('body--modal-opened');
+  } else if (target.classList.contains('modal')) {
     document.body.classList.remove('body--modal-opened');
   }
 }
 
-
+/* Modaltwo */
 
 const modaltwo = document.querySelector('.modaltwo');
 const modaltwoButtons = document.querySelectorAll('.calculation__btn');
 
-modaltwoButtons.forEach(function(button) {
+modaltwoButtons.forEach(function (button) {
   button.addEventListener('click', openModaltwo);
 });
 
@@ -69,13 +72,16 @@ function openModaltwo(e) {
 function closeModaltwo(e) {
   const target = e.target;
 
-  if (target.closest('.modaltwo__cancel') || target.classList.contains('modaltwo')) {
+  if (target.closest('.modaltwo__cancel')) {
+    e.preventDefault();
+    document.body.classList.remove('body--modaltwo-opened');
+  } else if (target.classList.contains('modaltwo')) {
     document.body.classList.remove('body--modaltwo-opened');
   }
 }
 
-
 /* Window-opened */
+
 const windowModal = document.querySelector('.window__modal');
 const windowModalButton = document.querySelector('.services__item-windows');
 
@@ -88,6 +94,8 @@ function openwindowModal(e) {
 }
 
 function closewindowModal(e) {
+  e.preventDefault()
+
   const target = e.target;
 
   if (target.closest('.window__modal-cancel') || target.classList.contains('window__modal')) {
@@ -96,6 +104,7 @@ function closewindowModal(e) {
 }
 
 /* Loggia-opened */
+
 const loggiaModal = document.querySelector('.loggia__modal');
 const loggiaModalButton = document.querySelector('.services__item-loggia');
 
@@ -108,6 +117,8 @@ function openloggiaModal(e) {
 }
 
 function closeloggiaModal(e) {
+  e.preventDefault()
+
   const target = e.target;
 
   if (target.closest('.loggia__modal-cancel') || target.classList.contains('loggia__modal')) {
@@ -116,6 +127,7 @@ function closeloggiaModal(e) {
 }
 
 /* House-opened */
+
 const houseModal = document.querySelector('.house__modal');
 const houseModalButton = document.querySelector('.services__item-house');
 
@@ -128,6 +140,8 @@ function openhouseModal(e) {
 }
 
 function closehouseModal(e) {
+  e.preventDefault()
+
   const target = e.target;
 
   if (target.closest('.house__modal-cancel') || target.classList.contains('house__modal')) {
@@ -135,7 +149,8 @@ function closehouseModal(e) {
   }
 }
 
-/* Corporate opened */ 
+/* Corporate opened */
+
 const corporateModal = document.querySelector('.corporate__modal');
 const corporateModalButton = document.querySelector('.services__item-corporate');
 
@@ -148,6 +163,8 @@ function opencorporateModal(e) {
 }
 
 function closecorporateModal(e) {
+  e.preventDefault()
+
   const target = e.target;
 
   if (target.closest('.corporate__modal-cancel') || target.classList.contains('corporate__modal')) {
@@ -155,3 +172,39 @@ function closecorporateModal(e) {
   }
 }
 
+/* Product swiper slide */ 
+
+var swiper = new Swiper('.product__swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 500,
+  navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      effect: 'slide',
+        speed: 800,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    renderBullet: function (index, className) {
+      let bulletText;
+      switch(index) {
+        case 0:
+          bulletText = 'Стандарт';
+          break;
+        case 1:
+          bulletText = 'Бизнес';
+          break;
+        case 2:
+          bulletText = 'Премиум';
+          break;
+        case 3:
+          bulletText = 'Эксклюзив';
+          break;
+        default:
+          bulletText = '';
+      }
+      return '<span class="' + className + '">' + bulletText + '</span>';
+    },
+  },
+});

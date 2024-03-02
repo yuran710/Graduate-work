@@ -1,0 +1,42 @@
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: $dark;
+  position: absolute;
+  transition: $transition;
+
+  &:hover {
+    color: $modal;
+  }
+
+  &.swiper-button-disabled {
+    color: $nav-arrow;
+  }
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: 70px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 20px;
+}
+
+.swiper-pagination {
+  @include fontSetContent(400, 18px, $dark);
+
+  &-bullet {
+    width: auto;
+    height: auto;
+    background: transparent;
+    border-radius: 0;
+    opacity: 1;
+
+    &-active {
+      background: $orange;
+      color: $white;
+      padding: 8px 25px;
+      border-radius: 3px;
+    }
+  }
+}
