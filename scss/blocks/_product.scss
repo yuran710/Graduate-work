@@ -25,7 +25,8 @@
   }
 
   &__slider-title {
-    padding: 74px 32px 52px 35px;
+    margin-top: 74px;
+    margin-left: 35px;
   }
 
   &__bulit-list {
@@ -46,11 +47,14 @@
 
   &__text {
     @include fontSetContent(400, 18px, $dark);
+    line-height: 1.2;
     margin-bottom: 38px;
   }
 
   &__list {
-    @include fontSetContent(300, 18px, $dark)
+    @include fontSetContent(300, 18px, $dark);
+    margin-bottom: 52px;
+    line-height: 1.2;
   }
 
   &__item {

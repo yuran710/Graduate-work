@@ -739,7 +739,8 @@ address {
   border-radius: 5px;
 }
 .product__slider-title {
-  padding: 74px 32px 52px 35px;
+  margin-top: 74px;
+  margin-left: 35px;
 }
 .product__bulit-list {
   display: -webkit-box;
@@ -766,12 +767,15 @@ address {
   font-weight: 400;
   font-size: 18px;
   color: #000000;
+  line-height: 1.2;
   margin-bottom: 38px;
 }
 .product__list {
   font-weight: 300;
   font-size: 18px;
   color: #000000;
+  margin-bottom: 52px;
+  line-height: 1.2;
 }
 .product__item {
   margin-bottom: 15px;
