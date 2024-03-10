@@ -1,0 +1,46 @@
+.about-company {
+
+  &__card-main {
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    max-width: 1200px;
+    min-height: 461px;
+    padding: 68px 60px 49px 50px;
+  }
+
+  &__card-head {
+    margin-bottom: 75px;
+  }
+
+  &__card-box {}
+
+  &__card-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+
+  &__card-item {}
+
+  &__card-img {
+    margin-bottom: 32px;
+  }
+
+  &__card-botom {
+    margin-bottom: 42px;
+  }
+
+  &__card-text {
+    width: 251px;
+    display: block;
+    flex-direction: column;
+    color: $dark;
+
+    & span {
+      @include fontSetContent(700, 16px, $accent)
+    }
+  }
+}

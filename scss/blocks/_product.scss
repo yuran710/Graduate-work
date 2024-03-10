@@ -12,32 +12,21 @@
 
   &__swiper-container {
     overflow: hidden;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 1145px;
+    height: 461px;
+    border-radius: 5px;
+    background: $white;
   }
 
   &__main {
     display: flex;
-    margin: 0 auto;
-    align-items: center;
-    background: $white;
-    max-width: 1145px;
-    height: 461px;
-    border-radius: 5px;
   }
 
   &__slider-title {
     margin-top: 74px;
     margin-left: 35px;
-  }
-
-  &__bulit-list {
-    display: flex;
-    justify-content: center;
-    gap: 55px;
-    margin-bottom: 38px;
-  }
-
-  &__bulit-item {
-    @include fontSetContent(400, 18px, $accent);
   }
 
   &__head-title {
@@ -77,5 +66,16 @@
   &__button-next {
     position: absolute;
     transform: translateY(5rem);
+    color: $dark;
+    transition: $transition;
+
+    &:hover {
+      color: $modal;
+    }
+
+    &.swiper-button-disabled {
+      opacity: 1;
+      color: $nav-arrow;
+    }
   }
 }
