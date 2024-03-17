@@ -211,178 +211,121 @@ var swiper = new Swiper('.product__swiper-container', {
 
 /* Tabs */
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const tabs = document.querySelectorAll('.tabs__nav-link');
-//   const tabContents = document.querySelectorAll('.tabs__content-item');
-
-//   tabs.forEach((tab, index) => {
-//     tab.addEventListener('click', function (e) {
-//       e.preventDefault();
-
-//       // Делаем все табы неактивными
-//       tabs.forEach(tab => tab.classList.remove('active'));
-//       // Делаем все содержимое табов скрытым
-//       tabContents.forEach(content => content.style.display = 'none');
-
-//       // Делаем текущий таб активным
-//       this.classList.add('active');
-
-//       // Показываем соответствующее содержимое таба
-//       const targetTabContentId = this.getAttribute('href');
-//       const targetTabContent = document.querySelector(targetTabContentId);
-//       if (targetTabContent) {
-//         targetTabContent.style.display = 'block';
-
-//         // Инициализация слайдера, если таб содержит класс swiper-container
-//         if (targetTabContent.classList.contains('about-company__swiper-container')) {
-//           initSlider(targetTabContent);
-//         }
-//       }
-//     });
-//   });
-
-//   // По умолчанию активируем первый таб
-//   if (tabs.length > 0) {
-//     tabs[0].click();
-//   }
-// });
-
-// function initSlider(about-company__swiper-container) {
-//   const swiper = new Swiper('.about-company__swiper-container', {
-//     slidesPerView: 1,
-//     spaceBetween: 30,
-//     loop: true,
-//     navigation: {
-//       nextEl: container.querySelector('.swiper-button-next'),
-//       prevEl: container.querySelector('.swiper-button-prev'),
-//     },
-//   });
-// }
-// document.addEventListener('DOMContentLoaded', function () {
-//   const tabs = document.querySelectorAll('.tabs__nav-link');
-//   const tabContents = document.querySelectorAll('.tabs__content-item');
-
-//   tabs.forEach((tab, index) => {
-//     tab.addEventListener('click', function (e) {
-//       e.preventDefault();
-
-//       // Делаем все табы неактивными
-//       tabs.forEach(tab => tab.classList.remove('active'));
-//       // Делаем все содержимое табов скрытым
-//       tabContents.forEach(content => content.style.display = 'none');
-
-//       // Делаем текущий таб активным
-//       this.classList.add('active');
-
-//       // // Показываем соответствующее содержимое таба
-//       // const targetTabContentId = this.getAttribute('href');
-//       // const targetTabContent = document.querySelector(targetTabContentId);
-//       // if (targetTabContent) {
-//       //   targetTabContent.style.display = 'block';
-
-//       //   // Инициализация слайдера, если таб содержит класс swiper-container
-//       //   if (targetTabContent.classList.contains('about-company__swiper-container')) {
-//       //     initSlider(targetTabContent); // Передача элемента в функцию initSlider
-//       //   }
-//       // }
-//       // Показываем соответствующее содержимое таба
-//       const targetTabContentId = this.getAttribute('href');
-//       const targetTabContent = document.querySelector(targetTabContentId);
-//       if (targetTabContent) {
-//         targetTabContent.style.display = 'block';
-
-//         // Инициализация слайдера, если таб содержит класс swiper-container
-//         if (targetTabContent.classList.contains('about-company__swiper-container')) {
-//           initSlider(targetTabContent.querySelector('.swiper')); // Передача слайдера в функцию initSlider
-//         }
-//       }
-
-//     });
-//   });
-
-//   // По умолчанию активируем первый таб
-//   if (tabs.length > 0) {
-//     tabs[0].click();
-//   }
-// });
-
-// // function initSlider(container) { // Правильное имя параметра
-// //   const swiper = new Swiper(container, { // Использование переданного параметра
-// //     slidesPerView: 1,
-// //     spaceBetween: 500,
-// //     loop: true,
-// //     navigation: {
-// //       nextEl: container.querySelector('.swiper-button-next'), // Использование метода querySelector у переданного элемента
-// //       prevEl: container.querySelector('.swiper-button-prev'), // Использование метода querySelector у переданного элемента
-// //     },
-// //     observer: true,
-// //     observeParents: true,
-// //     observeSlideChildren: true,
-// function initSlider(container) { // Правильное имя параметра
-//   const swiper = new Swiper(container, { // Использование переданного параметра
-//     slidesPerView: 1,
-//     spaceBetween: 500,
-//     loop: true,
-//     navigation: {
-//       nextEl: container.querySelector('.swiper-button-next'), // Использование метода querySelector у переданного элемента
-//       prevEl: container.querySelector('.swiper-button-prev'), // Использование метода querySelector у переданного элемента
-//     },
-//     observer: true,
-//     observeParents: true,
-//     observeSlideChildren: true,
-
-//   });
-// }
-
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.tabs__nav-link');
   const tabContents = document.querySelectorAll('.tabs__content-item');
+  let swiperReviews = null;
+  let swiperCertificates = null;
 
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', function (e) {
-      e.preventDefault();
+  function clearTabsAndContent() {
+    tabs.forEach(tab => {
+      tab.classList.remove('active');
+    });
+    tabContents.forEach(content => {
+      content.style.display = 'none'; 
+      content.classList.remove('active');
+    });
+  }
 
-      // Делаем все табы неактивными
-      tabs.forEach(tab => tab.classList.remove('active'));
-      // Делаем все содержимое табов скрытым
-      tabContents.forEach(content => content.style.display = 'none');
-
-      // Делаем текущий таб активным
-      this.classList.add('active');
-
-      // Показываем соответствующее содержимое таба
-      const targetTabContentId = this.getAttribute('href');
-      const targetTabContent = document.querySelector(targetTabContentId);
-      if (targetTabContent) {
-        targetTabContent.style.display = 'block';
-
-        // Инициализация слайдера, если таб содержит класс swiper-container
-        if (targetTabContent.classList.contains('about-company__swiper-container')) {
-          initSlider(targetTabContent.querySelector('.swiper')); // Передача слайдера в функцию initSlider
-        }
+  function initOrUpdateSwiper(activeTab) {
+    if (activeTab === '#tab3') {
+      if (swiperReviews) {
+        swiperReviews.update();
+      } else {
+        swiperReviews = new Swiper('.reviews__swiper-container', {
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 8,
+          navigation: {
+            nextEl: '.reviews__button-next',
+            prevEl: '.reviews__button-prev',
+          },
+          effect: 'slide',
+          speed: 800,
+        });
       }
+    } else if (activeTab === '#tab4') {
+      if (swiperCertificates) {
+        swiperCertificates.update();
+      } else {
+        swiperCertificates = new Swiper('.certificat__swiper-container', {
+          loop: true,
+          slidesPerView: 5,
+          spaceBetween: 2,
+          navigation: {
+            nextEl: '.certificat__button-next',
+            prevEl: '.certificat__button-prev',
+          },
+          effect: 'slide',
+          speed: 500,
+        });
+      }
+    }
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', event => {
+      event.preventDefault();
+
+      const paneId = tab.getAttribute('href');
+      const activePane = document.querySelector(paneId);
+
+      clearTabsAndContent();
+
+      tab.classList.add('active');
+      activePane.classList.add('active'); 
+
+      activePane.style.display = 'flex';
+      activePane.style.opacity = 0;
+      setTimeout(() => { activePane.style.opacity = 1; }, 10); 
+
+      initOrUpdateSwiper(paneId);
     });
   });
 
-  // По умолчанию активируем первый таб
   if (tabs.length > 0) {
     tabs[0].click();
   }
 });
 
-function initSlider(container) { // Правильное имя параметра
-  const swiper = new Swiper(container, { // Использование переданного параметра
-    slidesPerView: 1,
-    spaceBetween: 500,
-    loop: true,
-    navigation: {
-      nextEl: container.querySelector('.swiper-button-next'), // Использование метода querySelector у переданного элемента
-      prevEl: container.querySelector('.swiper-button-prev'), // Использование метода querySelector у переданного элемента
-    },
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
+/* Review opened */ 
 
-  });
+const reviewModal = document.querySelector('.review__modal'); 
+const reviewModalButtons = document.querySelectorAll('.reviews__otziv-btn');
+
+reviewModalButtons.forEach(button => {
+  button.addEventListener('click', openReviewModal); 
+});
+
+if (reviewModal) {
+  reviewModal.addEventListener('click', closeReviewModal);
 }
+
+function openReviewModal(e) {
+  e.preventDefault();
+  document.body.classList.add('body--review-opened'); 
+}
+
+function closeReviewModal(e) {
+  const target = e.target;
+
+  if (target.closest('.review__modal-cancel') || target.classList.contains('review__modal')) {
+    e.preventDefault();
+    document.body.classList.remove('body--review-opened'); 
+  }
+}
+
+/* Portfolio swiper slide */ 
+
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.portfolio__swiper-container', {
+      loop: true, 
+      slidesPerView: 4,
+      spaceBetween: 30, 
+
+      navigation: {
+          nextEl: '.portfolio__button-next',
+          prevEl: '.portfolio__button-prev',
+      },
+  });
+});

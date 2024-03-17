@@ -1,0 +1,164 @@
+.review {
+  &__modal {
+    position: fixed;
+    inset: 0;
+    z-index: 15;
+    background: $muted;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+  }
+
+  &__modal-window {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    padding: 55px 100px 62px;
+    border-radius: 10px;
+    transition: all .8s;
+    opacity: 0;
+    transform: translate(0px, -100%);
+  }
+
+  &__modal-cancel {
+    position: absolute;
+    top: 25px;
+    right: 19px;
+
+    & path {
+      transition: $transition;
+    }
+
+    &:hover path {
+      stroke: $modal;
+    }
+  }
+
+  &__modal-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+  }
+
+  &__modal-img {}
+
+  &__modal-title {
+    @include fontSetContent(700, 24px, $accent);
+    margin: 0 auto;
+  }
+
+  &__modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+
+  }
+
+  &__modal-input {
+    background: $input;
+    border-radius: 3px;
+    height: 52.5px;
+    padding-left: 17px;
+
+    &::placeholder {
+      color: $placeholder;
+    }
+  }
+
+  &__modal-textarea {
+    resize: none;
+    border: none;
+    background: $input;
+    border-radius: 3px;
+    height: 134px;
+    padding: 17px 0 0 17px;
+    margin-bottom: 14px;
+
+    &::placeholder {
+      color: $placeholder;
+    }
+  }
+
+  &__checkbox-label {
+    @include fontSetContent(400, 14px, $color-link);
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  &__checkbox-input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+
+    &:checked+.review__custom-checkbox::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &__custom-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: $input;
+    border: 2px solid $muted;
+    vertical-align: sub;
+    margin-right: 12.5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      left: 50%;
+      width: 13px;
+      height: 14px;
+      transform: translate(-50%, -50%) scale(0);
+
+      background-image: url("./../img/header/check.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: $transition;
+    }
+  }
+
+  &__checkbox-link {
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__button {
+    @include fontSetContent(700, 16px, $white);
+    margin: 0 auto;
+    background: $modal;
+    margin-top: 11px;
+    padding: 16px 64px 16px 71px;
+    border-radius: 3px;
+    transition: $transition;
+
+    &:hover {
+      @include Hover;
+    }
+  }
+}
+
+.body--review-opened .review__modal {
+  @include bodyOpened;
+}
+
+.body--review-opened .review__modal-window {
+  @include bodyContent;
+}

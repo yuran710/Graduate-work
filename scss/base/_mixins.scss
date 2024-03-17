@@ -4,11 +4,11 @@
   padding: 13px;
   margin-right: 14px;
   transition: $transition;
-  
+
   &:hover {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  opacity: 0.85;
-}
+  @include Hover;
+  }
+
   & img {
     margin-right: 10px;
   }
@@ -35,6 +35,7 @@
   opacity: 1;
   visibility: visible;
 }
+
 @mixin bodyContent {
   transform: translate(0px, 0px);
   opacity: 1;
@@ -46,9 +47,22 @@
     @content;
   }
 }
+
 @mixin mediaMobile {
   @media screen and (max-width:$mobile) {
     @content;
   }
+}
+
+@mixin Hover {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 0.85;
+}
+
+@mixin checkboxLabel {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 14px;
 }
 

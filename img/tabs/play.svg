@@ -1,7 +1,20 @@
-<svg width="99.920624" height="102.401306" viewBox="0 0 99.9206 102.401" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="130.000000" height="133.000000" viewBox="0 0 130 133" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<desc>
 			Created with Pixso.
 	</desc>
-	<defs/>
-	<path id="Polygon 1" d="M94.5016 42.3116L14.581 1.12431C7.92554 -2.30557 0 2.52609 0 10.0133L0 92.388C0 99.8752 7.92557 104.707 14.581 101.277L94.5016 60.0897C101.727 56.3661 101.727 46.0352 94.5016 42.3116Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<defs>
+		<filter id="filter_212_125_dd" x="-0.750000" y="-0.200653" width="129.920624" height="132.401306" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="4"/>
+			<feGaussianBlur stdDeviation="5"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+	</defs>
+	<g filter="url(#filter_212_125_dd)">
+		<path id="Polygon 1" d="M108.75 53.11L28.83 11.92C22.17 8.49 14.25 13.32 14.25 20.81L14.25 103.18C14.25 110.67 22.17 115.5 28.83 112.07L108.75 70.88C115.97 67.16 115.97 56.83 108.75 53.11Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
 </svg>

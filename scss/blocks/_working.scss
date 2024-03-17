@@ -1,4 +1,4 @@
-.about-company {
+.working {
 
   &__card-main {
     background: $white;
@@ -14,16 +14,12 @@
     margin-bottom: 75px;
   }
 
-  &__card-box {}
-
   &__card-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     text-align: center;
   }
-
-  &__card-item {}
 
   &__card-img {
     margin-bottom: 32px;

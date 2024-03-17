@@ -1,0 +1,52 @@
+.portfolio {
+  &__container {
+    background: $white;
+    border-radius: 3px;
+  }
+
+  &__title {
+    margin: 47px 0 49px;
+  }
+
+  &__swiper-container {
+    overflow: hidden;
+    width: 1000px;
+    height: 461px;
+    background: $white;
+    margin: 0 auto;
+  }
+
+  &__card {
+    display: block;
+    overflow: hidden;
+    width: 215px;
+  }
+
+
+  &__img {
+    transition: $transition;
+
+    &:hover {
+      @include Hover;
+    }
+  }
+
+  &__button-prev {
+    left: 40px;
+  }
+
+  &__button-next {
+    right: 40px;
+  }
+
+  &__button-prev,
+  &__button-next {
+    position: absolute;
+    color: $dark;
+    transition: $transition;
+
+    &:hover {
+      color: $modal;
+    }
+  }
+}

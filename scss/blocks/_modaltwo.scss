@@ -1,13 +1,9 @@
-
-
 .body--modaltwo-opened .modaltwo {
-  opacity: 1;
-  visibility: visible;
+  @include bodyOpened;
 }
 
 .body--modaltwo-opened .modaltwo__window {
-  transform: translate(0px, 0px);
-  opacity: 1;
+  @include bodyContent;
 }
 
 .modaltwo__window {

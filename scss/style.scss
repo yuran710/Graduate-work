@@ -4,23 +4,30 @@
 @import './base/mixins';
 @import './base/base';
 
-//Blocks
+// Components
+@import'./components/burger-icon';
+@import'./components/checkbox';
+@import'./components/swiper-bullets';
+@import'./components/tabs';
+
+// Layout
 @import './blocks/header';
-@import './blocks/burger-icon';
 @import './blocks/quarantee';
-@import './blocks/checkbox';
 @import './blocks/services';
 @import './blocks/product';
-@import './blocks/swiper-bullets';
 @import './blocks/quality';
-@import './blocks/tabs';
-@import './blocks/tab-1';
-@import './blocks/tab-2';
-@import './blocks/tab-3';
+@import './blocks/about-company';
+@import './blocks/overvier';
+@import './blocks/working';
+@import './blocks/reviews';
+@import './blocks/certificat';
+@import './blocks/benefits';
+@import './blocks/portfolio';
 @import './blocks/footer';
 @import './blocks/modal';
 @import './blocks/modaltwo';
 @import './blocks/windows-modal';
-@import './blocks/loggia';
-@import './blocks/house';
-@import './blocks/corporate';
+@import './blocks/loggia-modal';
+@import './blocks/house-modal';
+@import './blocks/corporate-modal';
+@import './blocks/review-modal';

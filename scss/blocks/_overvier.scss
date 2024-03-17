@@ -1,9 +1,4 @@
-.about-company {
-  padding-top: 46px;
-
-  &__title {
-    margin-bottom: 40px;
-  }
+.overview {
 
   &__content {
     display: flex;
@@ -13,6 +8,7 @@
     background-color: $white;
     border-radius: 3px;
     gap: 10px;
+    transition: $transition;
   }
 
   &__logo {
@@ -46,10 +42,12 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    object-fit: contain;
   }
 
 
   &__img-button {
+    
     & path {
       transition: $transition;
     }

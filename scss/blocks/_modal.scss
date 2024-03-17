@@ -14,14 +14,12 @@
 }
 
 .body--modal-opened .modal {
-  opacity: 1;
-  visibility: visible;
+  @include bodyOpened;
 }
 
 .body--modal-opened .modal__window {
-    transform: translate(0px, 0px);
-    opacity: 1;
-  }
+  @include bodyContent;
+}
 
 .modal__window {
   position: relative;
@@ -74,11 +72,14 @@
 
 .form__input {
   height: 52px;
-  color: $placeholder;
   display: block;
   border-radius: 3px;
   padding-left: 16px;
   font-size: 19px;
+
+  &::placeholder {
+    color: $placeholder;
+  }
 }
 
 .modal__checkbox-label {

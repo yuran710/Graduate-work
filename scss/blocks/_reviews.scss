@@ -1,0 +1,77 @@
+.reviews {
+  &__swiper-container {
+    position: relative;
+    max-width: 1200px;
+    height: 461px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 3px;
+  }
+
+  &__otziv {
+    display: flex;
+    padding: 62px 0 63px;
+    gap: 62px;
+  }
+
+  &__otziv-name {
+    margin-left: 104px;
+    @include fontSetContent(700, 18px, $accent);
+  }
+
+  &__otziv-data {
+    display: flex;
+    @include fontSetContent(400, 14px, $nav-arrow);
+    line-height: 1.2;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__otziv-btn {
+    @include fontSetContent(700, 16px, $white);
+    position: absolute;
+    top: 50px;
+    right: 95px;
+    background: $modal;
+    border-radius: 3px;
+    padding: 17px 28px 18px 20px;
+    transition: $transition;
+
+    &:hover {
+      @include Hover;
+    }
+  }
+
+  &__img-btn {
+    margin-right: 18px;
+  }
+
+  &__slide-txt {
+    color: $slide-text;
+    display: flex;
+    margin: 0 auto;
+    text-align: justify;
+    align-items: center;
+    padding: 0 202px 20px 202px;
+    line-height: 1.2;
+  }
+
+  &__button-next {
+    right: 30px;
+  }
+
+  &__button-prev {
+    left: 30px;
+  }
+
+  &__button-prev,
+  &__button-next {
+    position: absolute;
+    color: $dark;
+    transition: $transition;
+
+    &:hover {
+      color: $modal;
+    }
+  }
+}
