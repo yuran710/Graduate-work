@@ -33,12 +33,12 @@
   }
 
   &:hover path {
-    stroke: $muted;
+    stroke: $modal;
   }
 }
 
 .body--window-opened .window__modal {
-@include bodyOpened;
+  @include bodyOpened;
 }
 
 .body--window-opened .window__modal-content {

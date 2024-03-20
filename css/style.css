@@ -1719,7 +1719,7 @@ address {
   transition: all 0.4s;
 }
 .modal__services-cancel:hover path {
-  stroke: rgba(0, 0, 0, 0.2823529412);
+  stroke: #EF7F1A;
 }
 
 .body--window-opened .window__modal {
