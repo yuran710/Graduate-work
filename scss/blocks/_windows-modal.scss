@@ -1,16 +1,23 @@
 .modal__services {
-  position: fixed;
-  inset: 0;
-  z-index: 10;
-  background: $muted-modal;
+  @include modalCenter;
+}
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.window {
+  &__swiper-container {
+    @include swiperContainer;
+  }
 
-  opacity: 0;
-  visibility: hidden;
-  transition: $transition;
+  &__swiper-pagination {
+    @include swiperPagination;
+  }
+
+  &__swiper-pagination-bullet {
+    @include swiperBullet;
+  }
+
+  &__swiper-pagination-bullet-active {
+    background: $orange;
+  }
 }
 
 .window__modal-content {
@@ -33,12 +40,12 @@
   }
 
   &:hover path {
-    stroke: $muted;
+    stroke: $modal;
   }
 }
 
 .body--window-opened .window__modal {
-@include bodyOpened;
+  @include bodyOpened;
 }
 
 .body--window-opened .window__modal-content {

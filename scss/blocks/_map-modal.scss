@@ -1,0 +1,154 @@
+.map {
+  &__modal {
+    @include modalCenter;
+  }
+
+  &__modal-content {
+    display: inline-block;
+    position: relative;
+    background: $white;
+    overflow: hidden;
+    top: 25%;
+    left: 25%;
+    transition: all .8s;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translate(0px, -100%);
+  }
+
+  &__modal-cancel {
+    position: absolute;
+    top: 25px;
+    right: 19px;
+    z-index: 30;
+
+    & path {
+      transition: $transition;
+    }
+
+    &:hover path {
+      stroke: $modal;
+    }
+  }
+
+  &__modal-head {
+    position: relative;
+    display: flex;
+    padding: 49px 95px 0 88px;
+  }
+
+  &__swiper-container {
+    width: 359px;
+    height: 229px;
+    overflow: hidden;
+  }
+
+  &__inner-img {
+    margin-right: 61px;
+  }
+
+  &__swiper-pagination {
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 23%;
+    gap: 12px;
+    z-index: 50;
+  }
+
+  &__swiper-pagination-bullet {
+    box-sizing: border-box;
+    border: 1px solid rgb(148, 148, 168);
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+
+  }
+
+  &__swiper-pagination-bullet-active {
+    background: $modal;
+  }
+
+
+
+  &__data {
+    @include fontSetContent(400, 14px, $data-color);
+    display: flex;
+    align-items: center;
+  }
+
+  &__location-img {
+    margin-left: 30px;
+  }
+
+  &__address {
+    @include fontSetContent(700, 16px, $dark);
+    margin-left: 6px;
+  }
+
+  &__title {
+    @include fontSetContent(700, 24px, $accent);
+    margin-top: 15px;
+  }
+
+  &__text {
+    @include fontSetContent(700, 16px, $dark);
+    line-height: 1.2;
+  }
+
+  &__txt {
+    font-weight: 400;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 14px;
+    margin: 28px 0 29px;
+  }
+
+  &__measuring-btn {
+    @include fontSetContent(700, 13px, $white);
+    display: flex;
+    align-items: center;
+    padding: 10px 19px 14px;
+    background: $orange;
+    border-radius: 3px;
+  }
+
+  &__img-btn {
+    margin-right: 10px;
+  }
+
+  &__price-btn {
+    @include fontSetContent(700, 13px, $white);
+    display: flex;
+    align-items: center;
+    background: $purple;
+    padding: 11px 17px 12px;
+    border-radius: 3px;
+  }
+
+  &__measuring-btn,
+  &__price-btn {
+    transition: $transition;
+
+    &:hover {
+      @include Hover;
+    }
+  }
+
+}
+
+.map-2 {
+  width: 1000px;
+  height: 311px;
+}
+
+.body--map-opened .map__modal {
+  @include bodyOpened;
+}
+
+.body--map-opened .map__modal-content {
+  @include bodyContent;
+}

@@ -116,7 +116,7 @@
                         конфиденциальности</a>
                     </label>
                   </div>
-                  <button class="quarantee__button">
+                  <button class="quarantee__button" type="button">
                     Отправить заявку
                   </button>
                   <img class="quarantee__form-img" src="./img/main/ruler.png" alt="">
@@ -375,6 +375,7 @@
       </section>
       <section class="quality none1">
         <div class="container">
+          <h2 class="visually-hidden">Гарантия</h2>
           <div class="quality__inner">
             <div class="quality__logo">
               <img class="quality__logo-img" src="img/quality/quality-logo.svg" alt="окна-бг">
@@ -725,28 +726,282 @@
             </h2>
             <div class="swiper-wrapper">
               <div class="potfolio__card swiper-slide">
-                  <img class="portfolio__img" src="img/portfolio/01.jpeg" alt="">
-                </div>
+                <img class="portfolio__img" src="img/portfolio/01.jpeg" alt="">
+              </div>
               <div class="potfolio__card swiper-slide">
-                  <img class="portfolio__img" src="img/portfolio/02.jpeg" alt="">
-                </div>
+                <img class="portfolio__img" src="img/portfolio/02.jpeg" alt="">
+              </div>
               <div class="potfolio__card swiper-slide">
-                  <img class="portfolio__img" src="img/portfolio/03.jpeg" alt="">
-                </div>
+                <img class="portfolio__img" src="img/portfolio/03.jpeg" alt="">
+              </div>
               <div class="potfolio__card swiper-slide">
-                  <img class="portfolio__img" src="img/portfolio/04.jpeg" alt="">
-                </div>
+                <img class="portfolio__img" src="img/portfolio/04.jpeg" alt="">
+              </div>
               <div class="potfolio__card swiper-slide">
-                  <img class="portfolio__img" src="img/portfolio/03.jpeg" alt="">
-                </div>
+                <img class="portfolio__img" src="img/portfolio/03.jpeg" alt="">
               </div>
             </div>
-            <div class="portfolio__button-prev swiper-button-prev"></div>
-            <div class="portfolio__button-next swiper-button-next"></div>
           </div>
+          <div class="portfolio__button-prev swiper-button-prev"></div>
+          <div class="portfolio__button-next swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="section__map none1">
+        <div class="container">
+          <h2 class="visually-hidden">карта</h2>
+          <div class="section__map-map ymaps-layers-pane">
+            <div class="map" id="map"></div>
+          </div>
+        </div>
+      </section>
+      <section class="question-answer none1">
+        <div class="container">
+          <div class="question-answer__list">
+            <h2 class="question-answer__title title-2">
+              Вопрос-ответ
+            </h2>
+            <div class="question-answer__item">
+              <button class="question-answer__question">
+                Сколько по времени занимает изготовление пластиковых окон?
+                <div class="question-answer__arrow">
+                  <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1.70605L15 15.7061L29 1.70605" stroke="#2F2F51" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </button>
+              <div class="question-answer__answer">
+                <p class="question-answer__text">
+                  От 5 до 10 дней.
+                </p>
+              </div>
+            </div>
+            <div class="question-answer__item">
+              <button class="question-answer__question">
+                Какие существуют способы оплаты?
+                <div class="question-answer__arrow">
+                  <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1.70605L15 15.7061L29 1.70605" stroke="#2F2F51" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </button>
+              <div class="question-answer__answer">
+                <p class="question-answer__text">
+                  Перевод на карту.
+                </p>
+              </div>
+            </div>
+            <div class="question-answer__item">
+              <button class="question-answer__question">
+                Где я могу посмотреть образцы?
+                <div class="question-answer__arrow">
+                  <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1.70605L15 15.7061L29 1.70605" stroke="#2F2F51" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </button>
+              <div class="question-answer__answer">
+                <p class="question-answer__text">
+                  У нас в каталоге.
+                </p>
+              </div>
+            </div>
+            <div class="question-answer__item">
+              <button class="question-answer__question">
+                Зачем вызывать замерщика? Я могу дать размеры
+                <div class="question-answer__arrow">
+                  <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1.70605L15 15.7061L29 1.70605" stroke="#2F2F51" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </button>
+              <div class="question-answer__answer">
+                <p class="question-answer__text">
+                  Замерщик лучше знает как надо замерять.
+                </p>
+              </div>
+            </div>
+            <div class="question-answer__item">
+              <button class="question-answer__question">
+                Хотелось бы отделать балкон. Поможете?
+                <div class="question-answer__arrow">
+                  <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1.70605L15 15.7061L29 1.70605" stroke="#2F2F51" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </button>
+              <div class="question-answer__answer">
+                <p class="question-answer__text">
+                  Без проблем.
+                </p>
+              </div>
+            </div>
+            <div class="question-answer__item">
+              <button class="question-answer__question">
+                Мне надо нанимать грузчиков для подъема?
+                <div class="question-answer__arrow">
+                  <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1.70605L15 15.7061L29 1.70605" stroke="#2F2F51" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </button>
+              <div class="question-answer__answer">
+                <p class="question-answer__text">
+                  Нет, команда мастеров все сами аккуратно доставят и внесут.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="container">
+          <h2 class="contacts__title title-2">Контакты</h2>
+          <div class="contacts__block">
+            <div class="contacts__block-inner">
+              <div class="contacts__block-label">Бесплатная консультация:</div>
+              <div class="contacts__list-number">
+                <a class="contacts__list-phone" href="tel:8(4932)34-31-40">
+                  <img class="contacts__list-icon" src="./img/contact/01.svg" alt="Телефон"> 8 (4932) 34 - 31 - 40
+                </a>
+                <a class="contacts__list-phone" href="tel:8(905)109-31-40">
+                  8 (905) 109 - 31 - 40
+                </a>
+              </div>
+              <div class="contacts__list">
+                <a class="contacts__list-address" href="https://yandex.ru/maps/-/CCUNRJu-CB">
+                  <img class="contacts__list-icon" src="./img/contact/02.svg" alt="Адрес">
+                  г. Иваново, ул. Генерала Хлебникова, д.54, оф.303
+                </a>
+              </div>
+              <a class="contacts__list-email" href="mailto:okna@haus.ru">
+                <img class="contacts__list-icon" src="./img/contact/03.svg" alt="Почта">
+                okna@haus.ru
+              </a>
+              <div class="contacts__block-description">
+                <div class="contacts__block-slogan">
+                  <p class="contacts__block-slogan-text">
+                    Установку должны<br> выполнять только эксперты. <br>
+                    Нам доверяют сотни
+                    семей. <br>Узнайте поробнее, какие<br> решения
+                    вам
+                    подходят. <br>Вы можете приобрести <br>недорогие товары<br>
+                    при гарантированно <br>высоком качестве.
+                  </p>
+                  <ul class="contacts__socials-list">
+                    <li class="contacts__socials-item">
+                      <a class="contacts__socials-link" href="https://www.vk.com/" target="_blank">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M21.7478 1.00366H0.634949V20.8465H21.7478V1.00366Z" stroke="#EF7F1A" stroke-width="2"
+                            stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M7.59731 14.5911V5.50055H11.0078C11.7023 5.50055 12.2583 5.59356 12.6758 5.77959C13.0975 5.96148 13.4262 6.24466 13.6618 6.62911C13.9016 7.00943 14.0214 7.40836 14.0214 7.82589C14.0214 8.21448 13.916 8.58033 13.7052 8.92344C13.4944 9.26656 13.176 9.54353 12.7503 9.75437C13.3001 9.91559 13.7217 10.1905 14.0152 10.5791C14.3129 10.9677 14.4617 11.4265 14.4617 11.9557C14.4617 12.3815 14.3708 12.7783 14.1889 13.1463C14.0111 13.51 13.7899 13.7911 13.5254 13.9896C13.2608 14.188 12.928 14.3389 12.527 14.4422C12.1302 14.5415 11.6424 14.5911 11.0636 14.5911H7.59731ZM8.80028 9.3203H10.766C11.2992 9.3203 11.6816 9.28516 11.9131 9.21489C12.219 9.12394 12.4485 8.97305 12.6014 8.76222C12.7585 8.55139 12.8371 8.28682 12.8371 7.96851C12.8371 7.66673 12.7647 7.40216 12.62 7.17479C12.4753 6.94329 12.2687 6.7862 11.9999 6.70352C11.7312 6.61671 11.2703 6.57331 10.6171 6.57331H8.80028V9.3203ZM8.80028 13.5183H11.0636C11.4522 13.5183 11.725 13.5038 11.8821 13.4749C12.1591 13.4253 12.3906 13.3426 12.5766 13.2269C12.7627 13.1111 12.9156 12.9437 13.0355 12.7246C13.1554 12.5014 13.2153 12.2451 13.2153 11.9557C13.2153 11.6167 13.1285 11.3232 12.9549 11.0752C12.7813 10.823 12.5394 10.6473 12.2294 10.5481C11.9235 10.4447 11.4811 10.3931 10.9024 10.3931H8.80028V13.5183Z"
+                            fill="#EF7F1A" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="contacts__socials-item">
+                      <a class="contacts__socials-link" href="https://www.facebook.com/" target="_blank">
+                        <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22.8775 1.00366H1.76468V20.8465H22.8775V1.00366Z" stroke="#EF7F1A" stroke-width="2"
+                            stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M13.6502 20.2893V10.8335H12.0195V9.39772H13.6502V8.23883C13.6502 7.50725 13.7151 6.9637 13.8451 6.60817C14.0228 6.12956 14.3339 5.74327 14.7783 5.44927C15.2296 5.14843 15.8586 4.99802 16.6654 4.99802C17.185 4.99802 17.7593 5.05955 18.3883 5.18262L18.1114 6.79277C17.7286 6.7244 17.3662 6.69021 17.0243 6.69021C16.4637 6.69021 16.0671 6.80986 15.8347 7.04916C15.6022 7.28846 15.486 7.7363 15.486 8.39266V9.39772H17.6089V10.8335H15.486V20.2893H13.6502Z"
+                            fill="#EF7F1A" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="contacts__socials-item">
+                      <a class="contacts__socials-link" href="https://www.instagram.com/" target="_blank">
+                        <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22.9597 1.00366H1.84686V20.8465H22.9597V1.00366Z" stroke="#EF7F1A" stroke-width="2"
+                            stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M12.4827 15.1317C14.8498 15.1317 16.7687 13.2128 16.7687 10.8456C16.7687 8.47851 14.8498 6.55957 12.4827 6.55957C10.1155 6.55957 8.19659 8.47851 8.19659 10.8456C8.19659 13.2128 10.1155 15.1317 12.4827 15.1317Z"
+                            stroke="#EF7F1A" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M19.6261 5.60721C20.0644 5.60721 20.4198 5.25185 20.4198 4.81349C20.4198 4.37513 20.0644 4.01978 19.6261 4.01978C19.1877 4.01978 18.8324 4.37513 18.8324 4.81349C18.8324 5.25185 19.1877 5.60721 19.6261 5.60721Z"
+                            stroke="#EF7F1A" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="contacts__socials-item">
+                      <a class="contacts__socials-link" href="https://telegram.org/" target="_blank">
+                        <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M23.0419 1.00366H1.92908V20.8465H23.0419V1.00366Z" stroke="#EF7F1A" stroke-width="2"
+                            stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M7.80255 9.73455L18.1208 5.44849L14.946 16.878L10.6599 14.1793L7.6438 14.3381L13.0411 10.8457"
+                            stroke="#EF7F1A" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="contacts__socials-item">
+                      <a class="contacts__socials-link" href="https://www.youtube.com/" target="_blank">
+                        <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22.9654 1.00366H1.85254V20.8465H22.9654V1.00366Z" stroke="#EF7F1A" stroke-width="2"
+                            stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M10.1071 6.40088L16.1394 10.6869L10.1071 14.338V6.40088Z" stroke="#EF7F1A"
+                            stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="contacts__socials-item">
+                      <a class="contacts__socials-link" href="https://ok.ru/" target="_blank">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22.365 1.00366H1.2522V20.8465H22.365V1.00366Z" stroke="#EF7F1A" stroke-width="2"
+                            stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M11.888 10.687C13.5537 10.687 14.9041 9.33666 14.9041 7.6709C14.9041 6.00515 13.5537 4.65479 11.888 4.65479C10.2222 4.65479 8.87186 6.00515 8.87186 7.6709C8.87186 9.33666 10.2222 10.687 11.888 10.687Z"
+                            stroke="#EF7F1A" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M15.2216 11.957C14.9041 12.9095 13.4754 13.5445 11.888 13.5445C10.1418 13.5445 8.71312 12.9095 8.39563 11.957"
+                            stroke="#EF7F1A" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M15.539 16.7193L11.888 13.5444L8.07812 17.0368" stroke="#EF7F1A" stroke-width="2"
+                            stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <img class="contacts__block-img" src="img/contact/contacts-window.jpg" alt="">
+              </div>
+            </div>
+            <form class="contacts__form">
+              <div class="contacts__form-inner">
+                <div class="contacts__form-title">Остались вопросы?</div>
+                <input class="contacts__form-input" type="text" placeholder="Ваше имя">
+                <input class="contacts__form-input" type="e-mail" placeholder="E-mail">
+                <textarea class="contacts__form-textarea" placeholder="Ваш отзыв" name="feedback"></textarea>
+                <div class="contacts__form-checkbox">
+                  <label class="contacts__checkbox-label">
+                    <input class="contacts__checkbox-input" type="checkbox" name="coding-notes">
+                    <span class="contacts__custom-checkbox"></span>
+                    Я согласен(на) на обработку<a class="contacts__checkbox-link" href="#">персональных данных</a>
+                  </label>
+                </div>
+                <button class="contacts__form-btn" type="button">
+                  Отправить сообщение
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
-    <footer class="footer none">
+    <footer class="footer none1">
       <div class="container">
         <div class="footer-box">
           <div class="footer-box__left">
@@ -789,7 +1044,7 @@
               Я согласен(на) на обработку<a class="modal__checkbox-link" href="#">персональных данных</a>
             </label>
           </div>
-          <button class="modal__button">
+          <button class="modal__button" type="button">
             Отправить заявку
           </button>
         </form>
@@ -822,7 +1077,7 @@
               Я согласен(на) на обработку<a class="modaltwo__checkbox-link" href="#">персональных данных</a>
             </label>
           </div>
-          <button class="modaltwo__button">
+          <button class="modaltwo__button" type="button">
             Отправить заявку
           </button>
         </form>
@@ -839,8 +1094,27 @@
           </svg>
         </a>
         <div class="window__inner-top modal__top">
-          <div class="window__inner-img modal__services-img">
-            <img class="window__modal-img img__modal" src="img/modal/01.jpeg" alt="окно">
+          <div class="window__inner-img window__swiper-container modal__services-img">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="window__modal-img img__modal" src="img/modal/01.jpeg" alt="окно">
+              </div>
+              <div class="swiper-slide">
+                <img class="window__modal-img img__modal" src="img/modal/02.jpeg" alt="окно">
+              </div>
+              <div class="swiper-slide">
+                <img class="window__modal-img img__modal" src="img/modal/03.jpeg" alt="окно">
+              </div>
+              <div class="swiper-slide">
+                <img class="window__modal-img img__modal" src="img/modal/04.jpeg" alt="окно">
+              </div>
+            </div>
+            <div class="window__swiper-pagination">
+              <span class="window__swiper-pagination-bullet" data-slide="0"></span>
+              <span class="window__swiper-pagination-bullet" data-slide="1"></span>
+              <span class="window__swiper-pagination-bullet" data-slide="2"></span>
+              <span class="window__swiper-pagination-bullet" data-slide="3"></span>
+            </div>
           </div>
           <div class="window__inner-title modal__inner">
             <h2 class="window__modal-title modal__services-title">
@@ -950,8 +1224,27 @@
           </svg>
         </a>
         <div class="loggia__inner-top modal__top">
-          <div class="loggia__inner-img modal__services-img">
-            <img class="loggia__modal-img img__modal" src="img/modal/02.jpeg" alt="лоджия">
+          <div class="loggia__inner-img loggia__swiper-container modal__services-img">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="loggia__modal-img img__modal" src="img/modal/02.jpeg" alt="лоджия">
+              </div>
+              <div class="swiper-slide">
+                <img class="loggia__modal-img img__modal" src="img/modal/01.jpeg" alt="лоджия">
+              </div>
+              <div class="swiper-slide">
+                <img class="loggia__modal-img img__modal" src="img/modal/03.jpeg" alt="лоджия">
+              </div>
+              <div class="swiper-slide">
+                <img class="loggia__modal-img img__modal" src="img/modal/04.jpeg" alt="лоджия">
+              </div>
+            </div>
+            <div class="loggia__swiper-pagination">
+              <span class="loggia__swiper-pagination-bullet" data-slide="0"></span>
+              <span class="loggia__swiper-pagination-bullet" data-slide="1"></span>
+              <span class="loggia__swiper-pagination-bullet" data-slide="2"></span>
+              <span class="loggia__swiper-pagination-bullet" data-slide="3"></span>
+            </div>
           </div>
           <div class="loggia__inner-title modal__inner">
             <h2 class="loggia__modal-title modal__services-title">
@@ -1059,8 +1352,27 @@
           </svg>
         </a>
         <div class="house__inner-top modal__top">
-          <div class="house__inner-img modal__services-img">
-            <img class="house__modal-img img__modal" src="img/modal/03.jpeg" alt="дом">
+          <div class="house__inner-img house__swiper-container modal__services-img">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="house__modal-img img__modal" src="img/modal/03.jpeg" alt="дом">
+              </div>
+              <div class="swiper-slide">
+                <img class="house__modal-img img__modal" src="img/modal/01.jpeg" alt="дом">
+              </div>
+              <div class="swiper-slide">
+                <img class="house__modal-img img__modal" src="img/modal/02.jpeg" alt="дом">
+              </div>
+              <div class="swiper-slide">
+                <img class="house__modal-img img__modal" src="img/modal/04.jpeg" alt="дом">
+              </div>
+            </div>
+            <div class="house__swiper-pagination">
+              <span class="house__swiper-pagination-bullet" data-slide="0"></span>
+              <span class="house__swiper-pagination-bullet" data-slide="1"></span>
+              <span class="house__swiper-pagination-bullet" data-slide="2"></span>
+              <span class="house__swiper-pagination-bullet" data-slide="3"></span>
+            </div>
           </div>
           <div class="house__inner-title modal__inner">
             <h2 class="house__modal-title modal__services-title">
@@ -1170,8 +1482,27 @@
           </svg>
         </a>
         <div class="corporate__inner-top modal__top">
-          <div class="corporate__inner-img modal__services-img">
-            <img class="corporate__modal-img img__modal" src="img/modal/04.jpeg" alt="дом">
+          <div class="corporate__inner-img corporate__swiper-container modal__services-img">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="corporate__modal-img img__modal" src="img/modal/04.jpeg" alt="дом">
+              </div>
+              <div class="swiper-slide">
+                <img class="corporate__modal-img img__modal" src="img/modal/01.jpeg" alt="дом">
+              </div>
+              <div class="swiper-slide">
+                <img class="corporate__modal-img img__modal" src="img/modal/02.jpeg" alt="дом">
+              </div>
+              <div class="swiper-slide">
+                <img class="corporate__modal-img img__modal" src="img/modal/03.jpeg" alt="дом">
+              </div>
+            </div>
+            <div class="corporate__swiper-pagination">
+              <span class="corporate__swiper-pagination-bullet" data-slide="0"></span>
+              <span class="corporate__swiper-pagination-bullet" data-slide="1"></span>
+              <span class="corporate__swiper-pagination-bullet" data-slide="2"></span>
+              <span class="corporate__swiper-pagination-bullet" data-slide="3"></span>
+            </div>
           </div>
           <div class="corporate__inner-title modal__inner">
             <h2 class="corporate__modal-title modal__services-title">
@@ -1293,12 +1624,92 @@
               Я согласен(на) на обработку<a class="review__checkbox-link" href="#">персональных данных</a>
             </label>
           </div>
-          <button class="review__button">
+          <button class="review__button" type="button">
             Оставить отзыв
           </button>
         </form>
       </div>
     </div>
+
+    <div class="map__modal">
+      <div class="map__modal-content">
+        <a class="map__modal-cancel" href="#">
+          <svg width="22.508057" height="22.507812" viewBox="0 0 22.5081 22.5078" fill="none"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path id="Vector 15" d="M21.504 1.00391L1.00403 21.5039M1.00403 1.00391L21.504 21.5039" stroke="#000000"
+              stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <div class="map__modal-head">
+          <div class="map__inner-img map__swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="map__img" src="img/map/windows.jpeg" alt="окна">
+              </div>
+              <div class="swiper-slide">
+                <img class="map__img" src="img/map/windows.jpeg" alt="окна">
+              </div>
+              <div class="swiper-slide">
+                <img class="map__img" src="img/map/windows.jpeg" alt="окна">
+              </div>
+              <div class="swiper-slide">
+                <img class="map__img" src="img/map/windows.jpeg" alt="окна">
+              </div>
+            </div>
+            <div class="map__swiper-pagination">
+              <span class="map__swiper-pagination-bullet" data-slide="0"></span>
+              <span class="map__swiper-pagination-bullet" data-slide="1"></span>
+              <span class="map__swiper-pagination-bullet" data-slide="2"></span>
+              <span class="map__swiper-pagination-bullet" data-slide="3"></span>
+            </div>
+          </div>
+          <div class="map__inner-title">
+            <span class="map__data">
+              08.10.2021
+              <img class="map__location-img" src="img/map/location-pin.svg" alt="">
+              <address class="map__address">г Иваново, ул Ташкентская, д 4 к 1</address>
+            </span>
+            <h2 class="map__title">
+              Монтаж окна и балконного блока
+            </h2>
+            <span class="map__text">
+              Что делали
+              <p class="map__txt">
+                Профильная система Rehau Blitz Фурнитура Roto NT
+              </p>
+              <br>
+            </span>
+            <span class="map__text">
+              Категории объекта:
+              <p class="map__txt">
+                Окна Балконный блок
+              </p>
+            </span>
+            <div class="map__buttons">
+              <button class="map__measuring-btn measuring__btn">
+                <img class="map__img-btn" src="img/header/ruler.svg" alt="">
+                Заявка на замер
+              </button>
+              <button class="map__price-btn calculation__btn">
+                <img class="map__img-btn" src="img/map/price.svg" alt="">
+                Узнать цену
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="map__main">
+          <div class="map-2" id="map-2"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <head>
+      <script src="https://api-maps.yandex.ru/2.1/?apikey=16a0d135-0e49-4356-aaa1-602a85611fa7&lang=ru_RU"
+        type="text/javascript">
+        </script>
+    </head>
+
 
 
     <script src="./libs/phonMask/mask.js"></script>

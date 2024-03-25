@@ -66,3 +66,40 @@
   font-size: 14px;
 }
 
+@mixin modalCenter {
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+  background: $muted;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition;
+}
+
+@mixin swiperContainer {
+  position: relative;
+  width: 307px;
+  height: 230px;
+  overflow: hidden;
+}
+
+@mixin swiperPagination {
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  left: 40%;
+  gap: 12px;
+  z-index: 50;
+}
+
+@mixin swiperBullet {
+  border-radius: 50%;
+  background: $white;
+  width: 8px;
+  height: 8px;
+}

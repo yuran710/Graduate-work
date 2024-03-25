@@ -1,67 +1,113 @@
-.review {
-  &__modal {
-    @include modalCenter;
+.contacts {
+  padding: 43px 0 40.55px;
+
+  &__title {
+    margin-bottom: 59px;
   }
 
-  &__modal-window {
-    position: relative;
+  &__block {
     display: flex;
-    flex-direction: column;
-    background: $white;
-    padding: 55px 100px 62px;
-    border-radius: 10px;
-    transition: all .8s;
-    opacity: 0;
-    transform: translate(0px, -100%);
+    justify-content: space-between;
+    padding: 0 43px 0 53px;
+
+
   }
 
-  &__modal-cancel {
-    position: absolute;
-    top: 25px;
-    right: 19px;
+  &__block-inner {
+    position: relative;
+  }
 
+  &__block-label {
+    @include fontSetContent(700, 18px, $accent);
+    margin-bottom: 18px;
+  }
+
+  &__list-number {
+    @include fontSetContent(700, 22px, $dark);
+    margin-left: -5px;
+    margin-bottom: 45px;
+    display: flex;
+    gap: 40px;
+  }
+
+  &__list {
+    margin-bottom: 13px;
+
+  }
+
+  &__list-icon {
+    margin-right: 25px;
+  }
+
+  &__list-address {
+    @include fontSetContent(400, 18px, $dark);
+  }
+
+  &__list-email {
+    @include fontSetContent(400, 18px, $dark);
+  }
+
+  &__block-slogan-text {
+    margin-top: 58px;
+  }
+
+  &__socials-list {
+    display: flex;
+    margin-top: 25px;
+    gap: 12px;
+
+  }
+
+  &__socials-link {
     & path {
       transition: $transition;
     }
 
     &:hover path {
-      stroke: $modal;
+      stroke: $accent;
     }
   }
 
-  &__modal-head {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-
+  &__block-img {
+    position: absolute;
+    right: -131px;
+    bottom: -40.55px;
   }
 
-  &__modal-img {}
-
-  &__modal-title {
-    @include fontSetContent(700, 24px, $accent);
-    margin: 0 auto;
+  &__form {
+    padding: 55px 57px 50px 59px;
+    background: $white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2);
   }
 
-  &__modal-form {
+  &__form-inner {
     display: flex;
     flex-direction: column;
-    gap: 21px;
 
   }
 
-  &__modal-input {
+  &__form-title {
+    @include fontSetContent(700, 24px, $accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  &__form-input {
+    height: 52.45px;
     background: $input;
-    border-radius: 3px;
-    height: 52.5px;
     padding-left: 17px;
+    border-radius: 3px;
+    margin-bottom: 21px;
 
     &::placeholder {
       color: $placeholder;
     }
   }
 
-  &__modal-textarea {
+  &__form-textarea {
     resize: none;
     border: none;
     background: $input;
@@ -76,8 +122,8 @@
   }
 
   &__checkbox-label {
-    @include fontSetContent(400, 14px, $color-link);
     display: flex;
+    font-size: 14px;
     text-align: center;
     align-items: center;
   }
@@ -89,7 +135,7 @@
     position: absolute;
     z-index: -1;
 
-    &:checked+.review__custom-checkbox::before {
+    &:checked+.contacts__custom-checkbox::before {
       transform: translate(-50%, -50%) scale(1);
     }
   }
@@ -122,6 +168,7 @@
   }
 
   &__checkbox-link {
+    @include fontSetContent(700, 14px, $modal);
     transition: $transition;
 
     &:hover {
@@ -129,12 +176,13 @@
     }
   }
 
-  &__button {
+  &__form-btn {
     @include fontSetContent(700, 16px, $white);
+    width: 258px;
     margin: 0 auto;
-    background: $modal;
-    margin-top: 11px;
-    padding: 16px 64px 16px 71px;
+    padding: 17px 43.5px;
+    margin-top: 32px;
+    background: $accent;
     border-radius: 3px;
     transition: $transition;
 
@@ -142,12 +190,4 @@
       @include Hover;
     }
   }
-}
-
-.body--review-opened .review__modal {
-  @include bodyOpened;
-}
-
-.body--review-opened .review__modal-window {
-  @include bodyContent;
 }

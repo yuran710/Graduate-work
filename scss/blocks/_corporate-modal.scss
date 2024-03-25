@@ -1,10 +1,28 @@
-.corporate__modal-content {
-  @include modalContent;
-  background: linear-gradient(156.56deg,
-      rgb(255, 255, 255) 47.215%,
-      rgba(255, 255, 255, 0) 210.306%,
-      rgb(255, 255, 255) 300.569%),
-    url("./../img/modal/corporate.jpeg") 100% 100% no-repeat;
+.corporate {
+  &__modal-content {
+    @include modalContent;
+    background: linear-gradient(156.56deg,
+        rgb(255, 255, 255) 47.215%,
+        rgba(255, 255, 255, 0) 210.306%,
+        rgb(255, 255, 255) 300.569%),
+      url("./../img/modal/corporate.jpeg") 100% 100% no-repeat;
+  }
+
+  &__swiper-container {
+    @include swiperContainer;
+  }
+
+  &__swiper-pagination {
+    @include swiperPagination;
+  }
+
+  &__swiper-pagination-bullet {
+    @include swiperBullet;
+  }
+
+  &__swiper-pagination-bullet-active {
+    background: $orange;
+  }
 }
 
 .body--corporate-opened .corporate__modal {

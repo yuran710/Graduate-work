@@ -1,0 +1,19 @@
+.section__map {
+  padding-bottom: 41px;
+
+  &__map-map {}
+}
+
+.map {
+  height: 311.5px;
+  background: $white;
+  border-radius: 3px;
+}
+
+.ymaps-layers-pane {
+	filter: grayscale(1);
+	-ms-filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+}

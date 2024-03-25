@@ -1,20 +1,10 @@
 .windows__modal {
-  position: fixed;
-  inset: 0;
-  z-index: 15;
-  background: $muted;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  opacity: 0;
-  visibility: hidden;
-  transition: $transition;
+  @include modalCenter;
 }
 
 .body--modal-opened .modal {
   @include bodyOpened;
+  z-index: 25;
 }
 
 .body--modal-opened .modal__window {
