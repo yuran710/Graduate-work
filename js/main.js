@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function updateLoggiaBullets() {
-      const activeIndex = loggiaSwiper.realIndex; // Получаем активный индекс для логгии
+      const activeIndex = loggiaSwiper.realIndex; 
       const paginationBullets = document.querySelectorAll('.loggia__swiper-pagination-bullet');
 
       paginationBullets.forEach((bullet, index) => {
@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function updateHouseBullets() {
-      const activeIndex = houseSwiper.realIndex; // Получаем активный индекс для дома
+      const activeIndex = houseSwiper.realIndex; 
       const paginationBullets = document.querySelectorAll('.house__swiper-pagination-bullet');
 
       paginationBullets.forEach((bullet, index) => {
@@ -306,7 +306,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 });
-
 
 /* Product swiper slide */
 
@@ -516,7 +515,7 @@ function init() {
       document.body.classList.add('body--map-opened');
       var modal = document.querySelector('.map__modal');
       var modalContent = document.querySelector('.map__modal-content');
-      modal.style.display = 'block';
+      modal.style.display = 'flex';
       setTimeout(function() {
         modalContent.style.opacity = 1;
         modalContent.style.transform = 'translate(0, 0)';

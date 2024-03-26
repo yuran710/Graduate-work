@@ -2564,8 +2564,6 @@ address {
   position: relative;
   background: #FFFFFF;
   overflow: hidden;
-  top: 25%;
-  left: 25%;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
   border-radius: 5px;
