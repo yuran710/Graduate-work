@@ -33,16 +33,36 @@
     position: relative;
     display: flex;
     padding: 49px 95px 0 88px;
+
+    @media (max-width:1000px) {
+      flex-direction: column;
+      padding: 30px 40px 0 30px;
+    }
   }
 
   &__swiper-container {
     width: 359px;
     height: 229px;
     overflow: hidden;
+
+    @media (max-width:500px) {
+      width: 320px;
+      padding: 0 0 0 50px;
+      height: 170px;
+    }
+    @media (max-width:400px) {
+      width: 250px;
+      padding: 0 0 0 30px;
+      height: 140px;
+    }
   }
 
   &__inner-img {
     margin-right: 61px;
+
+    @media (max-width:1000px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__swiper-pagination {
@@ -52,6 +72,21 @@
     left: 23%;
     gap: 12px;
     z-index: 50;
+
+    @media (max-width:1000px) {
+      top: 275px;
+      left: 35%;
+    }
+
+    @media (max-width:500px) {
+      top: 225px;
+      left: 35%;
+    }
+
+    @media (max-width:400px) {
+      top: 190px;
+      left: 35%;
+    }
   }
 
   &__swiper-pagination-bullet {
@@ -61,14 +96,17 @@
     border-radius: 50%;
     width: 10px;
     height: 10px;
-
   }
 
   &__swiper-pagination-bullet-active {
     background: $modal;
   }
 
-
+&__inner-title {
+  @media (max-width:480px) {
+    text-align: center;
+  }
+}
 
   &__data {
     @include fontSetContent(400, 14px, $data-color);
@@ -83,11 +121,20 @@
   &__address {
     @include fontSetContent(700, 16px, $dark);
     margin-left: 6px;
+
+    @media (max-width:480px) {
+      font-size: 12px;
+      line-height: 1.2;
+    }
   }
 
   &__title {
     @include fontSetContent(700, 24px, $accent);
     margin-top: 15px;
+
+    @media (max-width:480px) {
+    font-size: 18px;
+    }
   }
 
   &__text {
@@ -103,6 +150,10 @@
     display: flex;
     gap: 14px;
     margin: 28px 0 29px;
+
+    @media (max-width:480px) {
+      flex-direction: column;
+    }
   }
 
   &__measuring-btn {
@@ -131,6 +182,14 @@
   &__price-btn {
     transition: $transition;
 
+    @media (max-width:480px) {
+      display: flex;
+      justify-content: center;
+      width: 280px;
+      height: 43px;
+      margin: 0 auto;
+    }
+
     &:hover {
       @include Hover;
     }
@@ -139,8 +198,12 @@
 }
 
 .map-2 {
-  width: 1000px;
+  width: 100%;
   height: 311px;
+
+  @media (max-width:1000px) {
+    display: none;
+  }
 }
 
 .body--map-opened .map__modal {

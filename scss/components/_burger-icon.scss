@@ -1,3 +1,14 @@
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .burger-icon-btn {
   --time: 0.1s;
   --width: 40px;
@@ -5,13 +16,14 @@
   --line-height: 1px;
   --line-margin: 2;
   --color: #000000;
-
+  --animation-duration: 0.5s; /* Длительность анимации появления */
 
   height: var(--height);
   width: var(--width);
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: slideDown var(--animation-duration) ease-out; /* Применение анимации */
 }
 
 .burger-icon {
@@ -33,8 +45,7 @@
   height: var(--line-height);
 
   background-color: var(--color);
-  transition: tranaform var(--time) ease-in,
-    top var(--time) linear var(--time);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
 }
 
 .burger-icon::before {
@@ -52,8 +63,7 @@
 .burger-icon.burger-icon--active::before,
 .burger-icon.burger-icon--active::after {
   top: 0;
-  transition: top var(--time) linear,
-    transform var(--time) ease-in var(--time);
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
 }
 
 .burger-icon.burger-icon--active::before {

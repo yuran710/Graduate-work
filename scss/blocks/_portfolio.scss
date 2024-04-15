@@ -2,19 +2,41 @@
   &__container {
     background: $white;
     border-radius: 3px;
-    width: 1200px;
+    max-width: 1200px;
   }
 
   &__title {
     margin: 47px 0 49px;
+
+    @media (max-width:$max-width-m) {
+      margin: 30px 0 30px;
+    }
   }
 
   &__swiper-container {
+    position: relative;
     overflow: hidden;
-    width: 1000px;
+    max-width: 1000px;
     height: 461px;
     background: $white;
     margin: 0 auto;
+
+    @media (max-width:$max-width-xl) {
+      max-width: 668px;
+    }
+
+    @media (max-width:800px) {
+      max-width: 568px;
+    }
+
+    @media (max-width:790px) {
+      max-width: 468px;
+    }
+
+    @media (max-width:$max-width-m) {
+      max-width: 320px;
+      padding: 0 40px;
+    }
   }
 
   &__card {
@@ -22,7 +44,6 @@
     overflow: hidden;
     width: 215px;
   }
-
 
   &__img {
     transition: $transition;
@@ -34,10 +55,26 @@
 
   &__button-prev {
     left: 40px;
+
+    @media (max-width:1200px) {
+      left: 30px;
+    }
+
+    @media (max-width:$max-width-m) {
+      left: 10px;
+    }
   }
 
   &__button-next {
     right: 40px;
+
+    @media (max-width:1200px) {
+      right: 30px;
+    }
+
+    @media (max-width:$max-width-m) {
+      right: 10px;
+    }
   }
 
   &__button-prev,

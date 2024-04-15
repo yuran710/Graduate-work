@@ -1,15 +1,15 @@
 /* Burger Menu */
+const burgerBtn = document.querySelector('.burger-icon-btn');
+const burgerIcon = document.querySelector('.burger-icon');
+const nav = document.querySelector('.header__top-inner');
 
-// const burgerBtn = document.querySelector('.burger-icon-btn');
-// const burgerIcon = document.querySelector('.burger-icon');
-// const nav = document.querySelector('.header__top-inner');
 
+burgerBtn.onclick = function () {
+  burgerIcon.classList.toggle('burger-icon--active');
+  nav.classList.toggle('header__top-inner--mobile');
+  document.body.classList.toggle('no-scroll');
+}
 
-// burgerBtn.onclick = function () {
-//   burgerIcon.classList.toggle('burger-icon--active');
-//   nav.classList.toggle('header__top-inner--mobile');
-//   document.body.classList.toggle('.no-scroll');
-// }
 
 /* Phon Mask */
 
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.reviews__button-prev',
           },
           effect: 'slide',
-          speed: 800,
+          speed: 800,        
         });
       }
     } else if (activeTab === '#tab4') {
@@ -393,6 +393,21 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           effect: 'slide',
           speed: 500,
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10
+            
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20
+            },
+            1100: {
+              slidesPerView: 5,
+              spaceBetween: 30
+            }
+          }
         });
       }
     }
@@ -456,7 +471,26 @@ document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.portfolio__swiper-container', {
       loop: true, 
       slidesPerView: 4,
-      spaceBetween: 30, 
+      spaceBetween: 30,
+      
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 50
+        },
+        580: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+        800: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        1100: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
+      },
 
       navigation: {
           nextEl: '.portfolio__button-next',
@@ -567,7 +601,9 @@ function initSwiper() {
   if (!globalSwiper) {
     globalSwiper = new Swiper('.map__swiper-container', {
       loop: true,
-      initialSlide: 0
+      // initialSlide: 0
+      slidesPerView: 1,
+      spaceBetween: 70,
     });
 
     var paginationBullets = document.querySelectorAll('.map__swiper-pagination-bullet');

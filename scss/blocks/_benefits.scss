@@ -1,29 +1,55 @@
 .benefits {
   padding: 0 0 87px;
 
+  @media (max-width:$max-width-m) {
+    padding: 0 0 40px;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 73px;
     grid-row-gap: 137px;
     padding: 70px 50px 85px 42px;
+
+    @media (max-width:$max-width-xl) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 30px;
+      padding: 40px 20px;
+      justify-content: center;
+    }
   }
 
   &__item {
     display: flex;
     align-items: center;
-  }
 
-  &__img {}
+    @media (max-width:$max-width-xl) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
 
   &__img-left {
     margin-left: -20px;
+
+    @media (max-width:$max-width-xl) {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
     text-align: start;
     font-weight: 700;
     margin-left: 25px;
+
+    @media (max-width:$max-width-xl) {
+      margin-left: 0;
+      text-align: center;
+      margin-top: 10px;
+    }
   }
 
   &__title-top {
@@ -34,6 +60,11 @@
     @include fontSetContent(400, 16px, $dark);
     margin-top: 10px;
     text-wrap: nowrap;
+
+    @media (max-width:$max-width-xl) {
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
   }
 
   &__button {
@@ -45,6 +76,11 @@
     margin: 0 auto;
     background: $modal;
     transition: $transition;
+
+    @media (max-width:330px) {
+      padding: 15px;
+
+    }
 
     &:hover {
       @include Hover;

@@ -1,23 +1,28 @@
 .certificat {
 
-&__container {
-  position: relative;
-  width: 1200px;
-  margin: 0 auto;
-  background: $white;
-  border-radius: 3px;
-}
+  &__container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: $white;
+    border-radius: 3px;
+  }
 
   &__swiper-container {
     display: flex;
     overflow: hidden;
     background: $white;
-    width: 1000px;
-    height: 461px;
+    max-width: 1000px;
+    height: auto;
     padding: 94px 0;
     margin: 0 100px;
     box-sizing: border-box;
     z-index: 1;
+
+    @media (max-width:$max-width-m) {
+      padding: 50px 0;
+      margin: 0 50px;
+    }
   }
 
 
@@ -29,10 +34,18 @@
 
   &__button-next {
     right: 30px;
+
+    @media (max-width:$max-width-m) {
+      right: 10px;
+    }
   }
 
   &__button-prev {
     left: 30px;
+
+    @media (max-width:$max-width-m) {
+      left: 10px;
+    }
   }
 
   &__button-prev,

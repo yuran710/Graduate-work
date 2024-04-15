@@ -1,13 +1,15 @@
 .section__map {
-  padding-bottom: 41px;
+	padding-bottom: 41px;
 
-  &__map-map {}
+	@media (max-width:$max-width-m)  {
+		padding-bottom: 20px;
+	}
 }
 
 .map {
-  height: 311.5px;
-  background: $white;
-  border-radius: 3px;
+	height: 311.5px;
+	background: $white;
+	border-radius: 3px;
 }
 
 .ymaps-layers-pane {

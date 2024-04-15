@@ -42,6 +42,13 @@
   &:hover path {
     stroke: $modal;
   }
+
+  @media(max-width: $max-width-m) {
+    top: 15px;
+    right: 15px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .body--window-opened .window__modal {
@@ -55,10 +62,21 @@
 .modal__top {
   display: flex;
   gap: 92px;
+
+  @media(max-width: $max-width-xl) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
 }
 
 .modal__services-img {
   margin-bottom: 36px;
+
+  @media(max-width: $max-width-l) {
+    margin-bottom: 0;
+  }
 }
 
 .img__modal {
@@ -77,17 +95,31 @@
 
 .modal__text {
   color: $dark;
-  line-height: 1.2;
+  line-height: 1.1;
   margin-bottom: 22px;
 }
 
 .buttons {
   display: flex;
+
+  @media(max-width: $max-width-xl) {
+    margin-top: 60px;
+  }
+
+  @media(max-width: $max-width-m) {
+    flex-direction: column;
+    gap: 10px;
+  }
+
 }
 
 .modal__main {
   display: flex;
   gap: 34px;
+
+  @media(max-width: $max-width-xl) {
+    display: none;
+  }
 }
 
 .modal__item {

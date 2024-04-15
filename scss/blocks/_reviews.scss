@@ -6,12 +6,22 @@
     overflow: hidden;
     background: #fff;
     border-radius: 3px;
+
+    @media (max-width:$max-width-xl) {
+      height: auto;
+    }
   }
 
   &__otziv {
     display: flex;
     padding: 62px 0 63px;
     gap: 62px;
+
+    @media (max-width:$max-width-l) {
+      flex-direction: column;
+      padding: 23px 0 83px 0;
+      gap: 15px;
+    }
   }
 
   &__otziv-name {
@@ -25,6 +35,11 @@
     line-height: 1.2;
     align-items: center;
     justify-content: center;
+
+    @media(max-width:850px) {
+      flex-direction: none;
+      align-items: none;
+    }
   }
 
   &__otziv-btn {
@@ -36,6 +51,18 @@
     border-radius: 3px;
     padding: 17px 28px 18px 20px;
     transition: $transition;
+
+    @media(max-width:850px) {
+      top: 90px;
+    }
+
+    @media (max-width:$max-width-m) {
+      width: 219.16px;
+      height: 59px;
+      top: 95px;
+      right: 50px;
+      padding: 12px 20px 13px 15px;
+    }
 
     &:hover {
       @include Hover;
@@ -54,14 +81,30 @@
     align-items: center;
     padding: 0 202px 20px 202px;
     line-height: 1.2;
+
+    @media (max-width:$max-width-xl) {
+      padding: 0 180px 30px 180px;
+    }
+
+    @media (max-width:$max-width-l) {
+      padding: 0 53px 30px 53px;
+    }
   }
 
   &__button-next {
     right: 30px;
+
+    @media (max-width:$max-width-l) {
+      right: 10px;
+    }
   }
 
   &__button-prev {
     left: 30px;
+
+    @media (max-width:$max-width-l) {
+      left: 10px;
+    }
   }
 
   &__button-prev,

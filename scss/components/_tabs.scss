@@ -7,10 +7,28 @@
     display: flex;
     margin: 0 auto;
     margin-bottom: 25px;
+    flex-wrap: wrap;
+
+    @media (max-width:$max-width-l) {
+      justify-content: center;
+    }
+    @media (max-width:$max-width-m) {
+      flex-direction: column;
+      align-items: center;
+    }
 
     &-item {
       margin-right: 35px;
       @include fontSetContent(400, 18px, $accent);
+
+      @media (max-width:$max-width-l) {
+        margin-right: 20px;
+        margin-bottom: 10px;
+      }
+      @media (max-width:$max-width-m) {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
 
       &:last-of-type {
         margin-right: 0;
@@ -18,14 +36,18 @@
     }
 
     &-link {
-      display: block; 
+      display: block;
       padding: 10px 26px;
       border-radius: 3px;
+
+      @media (max-width:$max-width-l) {
+        padding: 8px 20px;
+      }
 
       &.active {
         background-color: $orange;
         color: $white;
-        transition: background-color 0.5s ease, color 0.5s ease; 
+        transition: background-color 0.5s ease, color 0.5s ease;
       }
     }
   }
@@ -33,18 +55,25 @@
   &__content {
     width: 100%;
 
+
     &-item {
       max-height: 0;
-      overflow: hidden; 
+      overflow: hidden;
       visibility: hidden;
       opacity: 0;
       transition: opacity 0.9s ease, max-height 0.9s ease, visibility 0.9s ease;
 
       &.active {
-        max-height: 500px; 
-        visibility: visible; 
+        max-height: 500px;
+        visibility: visible;
         opacity: 1;
       }
     }
+  }
+}
+
+.tabs__content {
+  &-item.active {
+    max-height: none;
   }
 }

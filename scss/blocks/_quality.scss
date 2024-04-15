@@ -1,6 +1,10 @@
 .quality {
   padding-bottom: 46px;
 
+  @media (max-width:$max-width-m) {
+    padding-bottom: 10px;
+  }
+
   &__inner {
     background:
       linear-gradient(180deg,
@@ -9,6 +13,12 @@
       url("./../img/quality/bg-image.jpeg");
     height: 436px;
     border-radius: 3px;
+
+    @media (max-width:$max-width-xl) {
+      width: 100%;
+      height: auto;
+      padding-bottom: 10px;
+    }
   }
 
   &__logo {
@@ -24,6 +34,25 @@
     justify-content: center;
     margin-top: 55px;
 
+    @media (max-width:$max-width-xl) {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 30px;
+      height: auto;
+    }
+
+    @media (max-width:$max-width-m) {
+      display: block;
+      
+      &:last-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__item {
+    @media (max-width:$max-width-m) {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -44,6 +73,10 @@
     background: $purple;
     border-radius: 3px;
     transition: $transition;
+
+    @media (max-width:$max-width-m) {
+      margin-top: 30px;
+    }
 
     &:hover {
       box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);

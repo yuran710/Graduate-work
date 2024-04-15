@@ -21,8 +21,11 @@ $color-link: #111E97;
 $data-color: #9494A8;
 
 /*  Media */
-$tablet: 1100px;
-$mobile: 550px;
+$max-width-m: 576px;
+$max-width-l: 768px;
+$max-width-xl: 1100px;
+$max-width-xxl: 1500px;
+
 
 /* Transition */
 $transition: all .4s;

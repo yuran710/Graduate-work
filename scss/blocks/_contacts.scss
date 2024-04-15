@@ -1,8 +1,16 @@
 .contacts {
   padding: 43px 0 40.55px;
 
+  @media (max-width:$max-width-m) {
+    padding: 10px 0 30px;
+  }
+
   &__title {
     margin-bottom: 59px;
+
+    @media (max-width:$max-width-m) {
+      margin-bottom: 30px;
+    }
   }
 
   &__block {
@@ -10,11 +18,20 @@
     justify-content: space-between;
     padding: 0 43px 0 53px;
 
-
+    @media (max-width:1230px) {
+      flex-direction: column;
+      padding: 0;
+      gap: 50px;
+      align-items: center;
+    }
   }
 
   &__block-inner {
     position: relative;
+
+    @media (max-width:480px) {
+      padding-left: 20px;
+    }
   }
 
   &__block-label {
@@ -28,15 +45,30 @@
     margin-bottom: 45px;
     display: flex;
     gap: 40px;
+
+    @media (max-width:630px) {
+      font-size: 18px;
+    }
+
+    @media (max-width:500px) {
+      flex-direction: column;
+      margin-bottom: 20px;
+      font-size: 18px;
+      gap: 10px;
+    }
   }
 
   &__list {
     margin-bottom: 13px;
-
   }
 
   &__list-icon {
     margin-right: 25px;
+
+    @media (max-width:502px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__list-address {
@@ -72,13 +104,27 @@
     position: absolute;
     right: -131px;
     bottom: -40.55px;
+
+    @media (max-width:1230px) {
+      left: 230px;
+      bottom: 10px;
+    }
+
+    @media (max-width:630px) {
+      display: none;
+    }
   }
 
   &__form {
+    max-width: 492px;
     padding: 55px 57px 50px 59px;
     background: $white;
     border-radius: 10px;
     box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2);
+
+    @media (max-width:450px) {
+      padding: 30px;
+    }
   }
 
   &__form-inner {
@@ -108,32 +154,15 @@
   }
 
   &__form-textarea {
-    resize: none;
-    border: none;
-    background: $input;
-    border-radius: 3px;
-    height: 134px;
-    padding: 17px 0 0 17px;
-    margin-bottom: 14px;
-
-    &::placeholder {
-      color: $placeholder;
-    }
+    @include modalTextarea;
   }
 
   &__checkbox-label {
-    display: flex;
-    font-size: 14px;
-    text-align: center;
-    align-items: center;
+    @include checkboxLabel;
   }
 
   &__checkbox-input {
-    width: 0;
-    height: 0;
-    opacity: 0;
-    position: absolute;
-    z-index: -1;
+    @include checkboxInput;
 
     &:checked+.contacts__custom-checkbox::before {
       transform: translate(-50%, -50%) scale(1);
@@ -141,29 +170,19 @@
   }
 
   &__custom-checkbox {
-    position: relative;
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background: $input;
-    border: 2px solid $muted;
-    vertical-align: sub;
-    margin-right: 12.5px;
+    @include customChekbox;
+    background: $input
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      top: 50%;
-      left: 50%;
-      width: 13px;
-      height: 14px;
-      transform: translate(-50%, -50%) scale(0);
+  &__form-txt {
+    text-wrap: nowrap;
+    align-items: center;
+    text-align: start;
+    margin-left: 9.5px;
+    line-height: 1.2;
 
-      background-image: url("./../img/header/check.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      transition: $transition;
+    @media (max-width:500px) {
+      text-wrap: wrap;
     }
   }
 
@@ -178,7 +197,7 @@
 
   &__form-btn {
     @include fontSetContent(700, 16px, $white);
-    width: 258px;
+    max-width: 258px;
     margin: 0 auto;
     padding: 17px 43.5px;
     margin-top: 32px;

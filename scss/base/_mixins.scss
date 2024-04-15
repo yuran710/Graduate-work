@@ -6,11 +6,120 @@
   transition: $transition;
 
   &:hover {
-  @include Hover;
+    @include Hover;
   }
 
   & img {
     margin-right: 10px;
+  }
+}
+
+@mixin modalCancel {
+  position: absolute;
+  top: 25px;
+  right: 19px;
+
+  & path {
+    transition: $transition;
+  }
+}
+
+@mixin modalWindow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 55px 100px 70px 100px;
+  border-radius: 10px;
+  transition: all .8s;
+  opacity: 0;
+  transform: translate(0px, -100%);
+
+  @media (max-width: $max-width-m) {
+    padding: 50px 40px;
+    max-width: 100%;
+    border-radius: 3px;
+  }
+}
+
+@mixin customChekbox {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: $white;
+  border: 2px solid $muted;
+  vertical-align: sub;
+
+  @media (max-width: $max-width-m) {
+    margin-right: 0;
+    width: 35px;
+    height: 25px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 14px;
+    transform: translate(-50%, -50%) scale(0);
+
+    background-image: url("./../img/header/check.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: $transition;
+  }
+}
+
+@mixin checkboxLabel {
+  display: flex;
+  align-items: center;
+  color: $white;
+  font-size: 14px;
+}
+
+@mixin checkboxInput {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+@mixin modalTxt {
+  color: $white;
+  text-align: start;
+  margin-left: 12.5px;
+  line-height: 1.2;
+}
+
+@mixin checkboxLink {
+  margin-left: 5px;
+  transition: $transition;
+
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+@mixin modalButton {
+  margin: 0 auto;
+  margin-top: 21px;
+  width: 258px;
+  height: 52px;
+  border-radius: 3px;
+  transition: $transition;
+
+  @media (max-width: $max-width-m) {
+    margin-top: 0;
+  }
+
+  @media (max-width: $max-width-m) {
+    width: 200px;
+    font-size: 16px;
   }
 }
 
@@ -23,12 +132,23 @@
 @mixin modalContent {
   position: relative;
   display: inline-block;
+  max-width: 1000px;
+  min-height: 649px;
   padding: 49px 138px 42px 109px;
   border-radius: 10px;
   gap: 92px;
   transition: all .8s;
   opacity: 0;
   transform: translate(0px, -100%);
+
+  @media(max-width: $max-width-xl) {
+    padding: 30px;
+    
+  }
+
+  @media(max-width: $max-width-m) {
+    padding: 20px;
+  }
 }
 
 @mixin bodyOpened {
@@ -41,19 +161,6 @@
   opacity: 1;
 }
 
-
-@mixin mediaTablet {
-  @media screen and (max-width:$tablet) {
-    @content;
-  }
-}
-
-@mixin mediaMobile {
-  @media screen and (max-width:$mobile) {
-    @content;
-  }
-}
-
 @mixin Hover {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   opacity: 0.85;
@@ -64,6 +171,20 @@
   text-align: center;
   align-items: center;
   font-size: 14px;
+}
+
+@mixin modalTextarea {
+  resize: none;
+    border: none;
+    background: $input;
+    border-radius: 3px;
+    height: 134px;
+    padding: 17px 0 0 17px;
+    margin-bottom: 14px;
+
+    &::placeholder {
+      color: $placeholder;
+    }
 }
 
 @mixin modalCenter {
@@ -86,6 +207,11 @@
   width: 307px;
   height: 230px;
   overflow: hidden;
+
+  @media(max-width: $max-width-m) {
+    width: 250px;
+  }
+
 }
 
 @mixin swiperPagination {
@@ -95,6 +221,12 @@
   left: 40%;
   gap: 12px;
   z-index: 50;
+
+  @media(max-width: $max-width-m) {
+    top: 70%;
+  }
+
+
 }
 
 @mixin swiperBullet {

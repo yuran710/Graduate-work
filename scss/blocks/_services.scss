@@ -1,6 +1,10 @@
 .services {
   padding: 68px 0 53px;
 
+  @media (max-width: $max-width-m) {
+    padding: 30px 0 20px;
+  }
+
   &__title {
     margin-bottom: 48px;
   }
@@ -9,6 +13,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+
+    @media (max-width:$max-width-xl) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: $max-width-l) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -16,6 +29,14 @@
     border-radius: 3px;
     padding: 55px 0 38px 50px;
     overflow: hidden;
+
+    @media (max-width:$max-width-xl) {
+      padding: 45px 30px;
+    }
+
+    @media (max-width: $max-width-l) {
+      padding: 35px 20px;
+    }
 
     &:hover {
       box-shadow: 0px 4px 4px $muted;
@@ -39,15 +60,37 @@
   &__header-label {
     @include fontSetContent(700, 24px, $accent);
     line-height: 1.25;
+
+    @media (max-width:$max-width-xl) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $max-width-l) {
+      font-size: 18px;
+    }
   }
 
   &__text {
     margin-top: 38px;
     max-width: 303px;
     line-height: 1.2;
+
+    @media (max-width:$max-width-xl) {
+      margin-top: 25px;
+    }
+
+    @media (max-width: $max-width-l) {
+      margin-top: 20px;
+      max-width: 100%;
+    }
   }
 
   &__arrow {
+
+    @media (max-width: $max-width-l) {
+      bottom: 10px;
+      right: 10px;
+    }
 
     & path {
       transition: $transition;

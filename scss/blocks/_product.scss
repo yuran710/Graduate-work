@@ -6,8 +6,16 @@
   padding: 50px 0 54px;
   align-items: center;
 
+  @media (max-width:$max-width-m) {
+    padding: 20px 0 20px;
+  }
+
   &__title {
     margin-bottom: 100px;
+
+    @media (max-width:$max-width-l) {
+      font-size: 20px;
+    }
   }
 
   &__swiper-container {
@@ -18,32 +26,70 @@
     height: 461px;
     border-radius: 5px;
     background: $white;
+
+    @media (max-width:$max-width-xl) {
+      max-width: 565px;
+      height: auto;
+    }
   }
 
   &__main {
     display: flex;
+
+    @media (max-width:$max-width-xl) {
+      flex-direction: column;
+    }
+  }
+
+  &__slider-img {
+    @media (max-width:$max-width-xl) {
+      order: 2;
+    }
   }
 
   &__slider-title {
     margin-top: 74px;
     margin-left: 35px;
+
+    @media (max-width:$max-width-xl) {
+      margin-top: 50px;
+      margin-left: 30px;
+      order: 1;
+    }
+
+    @media (max-width:$max-width-l) {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
   }
 
   &__head-title {
     @include fontSetContent(700, 36px, $orange);
     margin-bottom: 40px;
+
+    @media (max-width:$max-width-l) {
+      font-size: 24px;
+    }
   }
 
   &__text {
     @include fontSetContent(400, 18px, $dark);
     line-height: 1.2;
     margin-bottom: 38px;
+
+    @media (max-width:$max-width-m) {
+      font-size: 16px;
+    }
   }
 
   &__list {
     @include fontSetContent(300, 18px, $dark);
     margin-bottom: 52px;
     line-height: 1.2;
+
+    @media (max-width:$max-width-m) {
+      font-size: 11px;
+    }
   }
 
   &__item {
@@ -56,10 +102,26 @@
 
   &__button-prev {
     left: -20px;
+
+    @media (max-width:$max-width-xl) {
+      left: 50px;
+    }
+
+    @media (max-width:$max-width-m) {
+      left: 20px;
+    }
   }
 
   &__button-next {
     right: -20px;
+
+    @media (max-width:$max-width-xl) {
+      right: 50px;
+    }
+
+    @media (max-width:$max-width-m) {
+      right: 20px;
+    }
   }
 
   &__button-prev,
@@ -68,6 +130,10 @@
     transform: translateY(5rem);
     color: $dark;
     transition: $transition;
+
+    @media (max-width:$max-width-l) {
+      display: none;
+    }
 
     &:hover {
       color: $modal;

@@ -8,6 +8,10 @@
     max-width: 1200px;
     min-height: 461px;
     padding: 68px 60px 49px 50px;
+
+    @media (max-width:$max-width-l) {
+      padding: 40px 30px;
+    }
   }
 
   &__card-head {
@@ -19,14 +23,32 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     text-align: center;
+
+    @media (max-width:$max-width-xl) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width:$max-width-l) {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
   }
 
   &__card-img {
     margin-bottom: 32px;
+
+    @media (max-width:$max-width-l) {
+      margin-bottom: 20px;
+    }
   }
 
   &__card-botom {
     margin-bottom: 42px;
+
+    @media (max-width:$max-width-l) {
+      margin-bottom: 20px;
+    }
   }
 
   &__card-text {
@@ -34,6 +56,15 @@
     display: block;
     flex-direction: column;
     color: $dark;
+
+    @media (max-width:$max-width-xl) {
+      width: auto;
+      margin: 0 auto;
+    }
+
+    @media (max-width:$max-width-l) {
+      margin-bottom: 20px;
+    }
 
     & span {
       @include fontSetContent(700, 16px, $accent)

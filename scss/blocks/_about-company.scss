@@ -1,6 +1,10 @@
 .about-company {
   padding-top: 46px;
 
+  @media (max-width:$max-width-m) {
+    padding-top: 10px;
+  }
+
   &__title {
     margin-bottom: 40px;
   }

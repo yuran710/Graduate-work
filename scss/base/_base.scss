@@ -61,18 +61,23 @@
 .body--loggia-opened {
     overflow: hidden;
 }
+
 .body--house-opened {
     overflow: hidden;
 }
+
 .body--corporate-opened {
     overflow: hidden;
 }
+
 .body--review-opened {
     overflow: hidden;
 }
+
 .body--map-opened {
     overflow: hidden;
 }
+
 .body--map-2-opened {
     overflow: hidden;
 }
@@ -96,35 +101,29 @@
     }
 }
 
-.none {
-    display: none !important;
-}
-
 .title-2 {
     @include fontSetContent(700, 24px, $accent);
     text-align: center;
-
-    @include mediaTablet {
-        font-size: 28px;
-    }
 }
 
 .visually-hidden {
     /* Contain text within 1px box */
-	height: 1px;
-	overflow: hidden;
-	width: 1px;
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
 
-	/* Keep the layout */
-	position: absolute;
+    /* Keep the layout */
+    position: absolute;
 
-	/* Remove any visible trace (e.g. background color) */
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%); /* browsers in the future */
+    /* Remove any visible trace (e.g. background color) */
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    /* browsers in the future */
 
-	/* Prevent the screen reader to skip spaces between words */
-	white-space: nowrap;
+    /* Prevent the screen reader to skip spaces between words */
+    white-space: nowrap;
 }
 
 .no-scroll {
