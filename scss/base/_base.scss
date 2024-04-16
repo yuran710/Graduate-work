@@ -46,6 +46,10 @@
     line-height: 1.5;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .body--modal-opened {
     overflow: hidden;
 }

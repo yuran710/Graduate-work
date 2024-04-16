@@ -12,44 +12,44 @@
 
 </head>
 
-<body class="body">
+<body class="body body--opened-menu">
   <div class="wrapper">
     <header class="header">
       <div class="header__top">
         <div class="container">
           <div class="header__top-inner">
-            <a class="header__logo" href="#">
+            <a class="header__logo" href="/">
               <img src="img/header/logo.svg" alt="">
             </a>
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">
+                  <a class="nav__link" href="#services">
                     Услуги
                   </a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">
+                  <a class="nav__link" href="#product">
                     Продукция
                   </a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">
+                  <a class="nav__link" href="#company">
                     О компании
                   </a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">
+                  <a class="nav__link" href="#portfolio">
                     Портфолио
                   </a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">
+                  <a class="nav__link" href="#question">
                     Вопрос-ответ
                   </a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">
+                  <a class="nav__link" href="#contacts">
                     Контакты
                   </a>
                 </li>
@@ -126,7 +126,7 @@
           </div>
         </div>
       </section>
-      <section class="services">
+      <section class="services" id="services">
         <div class="container">
           <h2 class="services__title title-2">
             Наши услуги
@@ -140,7 +140,7 @@
               <p class="services__text">
                 Устанавливаем пластиковые окна Rehau от проверенного производителя с гарантией качества
               </p>
-              <div class="services__arrow" href="#">
+              <div class="services__arrow">
                 <svg width="39.907162" height="19.703125" viewBox="0 0 39.9072 19.7031" fill="none"
                   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <desc>
@@ -165,7 +165,7 @@
                 Занимаемся остеклением и отделкой
                 балконов и лоджий. Теплое и холодное остекление, изготовление выносов и крыш. Беремся за сложные объекты
               </p>
-              <div class="services__arrow" href="#">
+              <div class="services__arrow">
                 <svg width="39.907162" height="19.703125" viewBox="0 0 39.9072 19.7031" fill="none"
                   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <desc>
@@ -192,7 +192,7 @@
                 и беседок. Выделяем личного
                 технолога под каждый объект
               </p>
-              <div class="services__arrow" href="#">
+              <div class="services__arrow">
                 <svg width="39.907162" height="19.703125" viewBox="0 0 39.9072 19.7031" fill="none"
                   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <desc>
@@ -218,7 +218,7 @@
                 ресторанов, производственных помещений
                 и офисов
               </p>
-              <div class="services__arrow" href="#">
+              <div class="services__arrow">
                 <svg width="39.907162" height="19.703125" viewBox="0 0 39.9072 19.7031" fill="none"
                   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <desc>
@@ -235,7 +235,7 @@
           </div>
         </div>
       </section>
-      <section class="product">
+      <section class="product" id="product">
         <div class="container">
           <h2 class="product__title title-2">
             Продукция
@@ -426,7 +426,7 @@
           </button>
         </div>
       </section>
-      <section class="about-company">
+      <section class="about-company" id="company">
         <div class="container">
           <h2 class="about-company__title title-2">О компании</h2>
           <div class="tabs">
@@ -717,7 +717,7 @@
           </button>
         </div>
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container portfolio__container">
           <div class="portfolio__swiper-container">
             <h2 class="portfolio__title title-2">
@@ -753,7 +753,7 @@
           </div>
         </div>
       </section>
-      <section class="question-answer">
+      <section class="question-answer" id="question">
         <div class="container">
           <div class="question-answer__list">
             <h2 class="question-answer__title title-2">
@@ -858,7 +858,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <h2 class="contacts__title title-2">Контакты</h2>
           <div class="contacts__block">
@@ -1045,7 +1045,7 @@
               <p class="form__modal-txt">Я согласен(на) на обработку
                 <a class="modal__checkbox-link" href="#">персональных данных</a>
               </p>
-                
+
             </label>
           </div>
           <button class="modal__button" type="button">
@@ -1712,14 +1712,8 @@
     </div>
 
 
-    <head>
-      <script src="https://api-maps.yandex.ru/2.1/?apikey=16a0d135-0e49-4356-aaa1-602a85611fa7&lang=ru_RU"
-        type="text/javascript">
-        </script>
-    </head>
 
-
-
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=16a0d135-0e49-4356-aaa1-602a85611fa7&lang=ru_RU"></script>
     <script src="./libs/phonMask/mask.js"></script>
     <script src="./libs/phonMask/mask_list.js"></script>
     <script src="./js/fslightbox.js"></script>

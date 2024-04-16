@@ -86,7 +86,7 @@
   }
 
   &__arrow {
-
+display: block;
     @media (max-width: $max-width-l) {
       bottom: 10px;
       right: 10px;

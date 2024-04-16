@@ -1,3 +1,44 @@
+// .burger-icon {
+//   display: none;
+//   width: 50px;
+//   height: 50px;
+//   align-items: center;
+//   justify-content: center;
+
+//   @media (max-width:$max-width-xl) {
+//     display: flex;
+//     z-index: 11;
+//   }
+// }
+
+// .burger-icon span {
+//   position: relative;
+// }
+
+// .burger-icon span,
+// .burger-icon span::before,
+// .burger-icon span::after {
+//   display: block;
+//   width: 30px;
+//   height: 3px;
+//   border-radius: 100px;
+//   background: $accent;
+// }
+
+//   .burger-icon span::before,
+//   .burger-icon span::after {
+//     content: '';
+//     position: absolute;
+//   }
+
+//   .burger-icon span::before {
+//     top: -8px;
+//   }
+
+//   .burger-icon span::after {
+//     bottom: -8px;
+//   }
+
 @keyframes slideDown {
   from {
     transform: translateY(-100%);
@@ -16,14 +57,14 @@
   --line-height: 1px;
   --line-margin: 2;
   --color: #000000;
-  --animation-duration: 0.5s; /* Длительность анимации появления */
+  --animation-duration: 0.5s; 
 
   height: var(--height);
   width: var(--width);
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: slideDown var(--animation-duration) ease-out; /* Применение анимации */
+  animation: slideDown var(--animation-duration) ease-out; 
 }
 
 .burger-icon {

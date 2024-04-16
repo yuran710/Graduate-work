@@ -1,15 +1,39 @@
 /* Burger Menu */
+
 const burgerBtn = document.querySelector('.burger-icon-btn');
 const burgerIcon = document.querySelector('.burger-icon');
 const nav = document.querySelector('.header__top-inner');
 
-
 burgerBtn.onclick = function () {
   burgerIcon.classList.toggle('burger-icon--active');
-  nav.classList.toggle('header__top-inner--mobile');
-  document.body.classList.toggle('no-scroll');
+  setTimeout(() => {
+    nav.classList.toggle('header__top-inner--mobile');
+    document.body.classList.toggle('no-scroll');
+  }, 200); 
 }
 
+const navLinks = document.querySelectorAll('.nav__link');
+navLinks.forEach(link => {
+  link.addEventListener('click', function(event) {
+    if (link.hash !== '') {
+      event.preventDefault();
+      
+      const targetId = link.hash.slice(1);
+      const targetElement = document.getElementById(targetId);
+      
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start' 
+      });
+      
+      setTimeout(() => {
+        nav.classList.remove('header__top-inner--mobile');
+        burgerIcon.classList.remove('burger-icon--active');
+        document.body.classList.remove('no-scroll');
+      }, 200); 
+    }
+  });
+});
 
 /* Phon Mask */
 
@@ -195,7 +219,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-
 /* House-opened */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -250,7 +273,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 });
-
 
 /* Corporate opened */
 
@@ -601,7 +623,6 @@ function initSwiper() {
   if (!globalSwiper) {
     globalSwiper = new Swiper('.map__swiper-container', {
       loop: true,
-      // initialSlide: 0
       slidesPerView: 1,
       spaceBetween: 70,
     });

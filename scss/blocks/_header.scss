@@ -2,76 +2,26 @@
   padding: 17px 0;
 }
 
-.header__top-inner--mobile {
-  position: fixed;
-  background-color: $white;
-  z-index: 50;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 100px 0 100px;
-  transform: translateY(-100%);
-  transition: transform 0.5s ease-in-out;
-
-  .nav__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 30px;
-  }
-
-  .nav__item {
-    margin-right: 0;
-  }
-
-  .nav__link {
-    border-top: transparent solid 1px;
-    padding-top: 0px;
-
-    &:hover {
-      border-top: transparent solid 1px;
-      padding-top: 0px;
-    }
-  }
-
-  .header__nav-btn {
-    position: fixed;
-    top: 35px;
-    right: 15px;
-  }
-
-  .header__buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
 .header__top-inner {
   justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   transform: translateY(0);
+}
 
-
-  @media (max-width: $max-width-m) {
+.header__logo {
+  @media (max-width:$max-width-m) {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    margin: 0 auto;
+    padding-left: 20px;
   }
 }
 
 .nav__list {
   display: flex;
 
-  @media (max-width: $max-width-xl) {
+  @media (max-width:$max-width-xl) {
     display: none;
   }
 }
@@ -108,13 +58,69 @@
 .header__nav-btn {
   display: none;
 
-  @media (max-width: $max-width-l) {
+  @media (max-width: $max-width-xl) {
     display: block;
   }
+}
 
-  @media (max-width: $max-width-m) {
+.header__top-inner--mobile {
+  position: fixed;
+  background-color: $white;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 80px;
+
+  .header__logo {
+    @media (max-width:$max-width-m) {
+      padding-right: 40px;
+    }
+  }
+  
+  .nav__list {
+    display: flex;
+    font-weight: 700;
+    font-size: 24px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+  }
+
+  .nav__item {
+    margin-right: 0;
+  }
+
+  .nav__link {
+    color: $dark;
+    border-top: transparent solid 0px;
+    padding-top: 0px;
+    transition: $transition;
+  
+    &:hover {
+      color: $orange;
+      padding-top: 0px;
+      border-top: $orange solid 0px;
+    }
+  }
+  
+  .header__nav-btn {
     position: fixed;
     top: 35px;
     right: 15px;
+  }
+
+  .header__buttons {
+    flex-direction: column;
+    gap: 10px;
+
+    @media (max-width: $max-width-m) {
+      display: flex;
+    }
   }
 }
