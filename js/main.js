@@ -426,9 +426,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (reviewsContainer && !swiperReviews) {
       swiperReviews = new Swiper(reviewsContainer, {
         loop: true,
-        autoplay: {
-          delay: 2000,
-        },
         slidesPerView: 1,
         spaceBetween: 8,
         navigation: {

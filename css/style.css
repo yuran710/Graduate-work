@@ -591,6 +591,11 @@ html {
           align-items: center;
   gap: 62px;
 }
+@media (max-width: 576px) {
+  .nav {
+    gap: 30px;
+  }
+}
 @media (max-width: 1135px) {
   .nav {
     position: fixed;
