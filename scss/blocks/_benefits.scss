@@ -58,6 +58,7 @@
 
   &__text {
     @include fontSetContent(400, 16px, $dark);
+    display: block;
     margin-top: 10px;
     text-wrap: nowrap;
 

@@ -140,6 +140,9 @@
   &__text {
     @include fontSetContent(700, 16px, $dark);
     line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 
   &__txt {

@@ -1,7 +1,7 @@
 @mixin headerBtn {
   @include fontSetContent(700, 13px, $white);
   border-radius: 3px;
-  padding: 13px;
+  padding: 10px 19px 12.36px 14px;
   margin-right: 14px;
   transition: $transition;
 
@@ -134,7 +134,7 @@
   display: inline-block;
   max-width: 1000px;
   min-height: 649px;
-  padding: 49px 138px 42px 109px;
+  padding: 49px 117px 42px 109px;
   border-radius: 10px;
   gap: 92px;
   transition: all .8s;

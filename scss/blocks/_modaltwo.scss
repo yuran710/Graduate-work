@@ -1,6 +1,6 @@
 .body--modaltwo-opened .modaltwo {
   @include bodyOpened;
-  z-index: 100;
+  z-index: 300;
 }
 
 .body--modaltwo-opened .modaltwo__window {

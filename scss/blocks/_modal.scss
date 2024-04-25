@@ -4,7 +4,7 @@
 
 .body--modal-opened .modal {
   @include bodyOpened;
-  z-index: 100;
+  z-index: 300;
 }
 
 .body--modal-opened .modal__window {

@@ -48,6 +48,11 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding: 76px;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 .body--modal-opened {
@@ -101,7 +106,7 @@ html {
     height: 100%;
 
     &--sm {
-        max-width: 1077px;
+        max-width: 1054px;
     }
 }
 
@@ -128,10 +133,6 @@ html {
 
     /* Prevent the screen reader to skip spaces between words */
     white-space: nowrap;
-}
-
-.no-scroll {
-    overflow-y: hidden;
 }
 
 .measuring__button {

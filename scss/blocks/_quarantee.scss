@@ -1,5 +1,5 @@
 .quarantee {
-  min-height: 562px;
+  padding-top: 98px;
   background:
     linear-gradient(180deg,
       rgba(51, 51, 73, 0.96) 50%,
@@ -57,9 +57,11 @@
 .quarantee__slogan {
   @include fontSetContent(700, 24px, $orange);
   margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: $max-width-xl) {
-    display: block;
+  display: block;
     text-align: center;
   }
 
