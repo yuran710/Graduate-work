@@ -2635,7 +2635,7 @@ html {
 .windows__modal {
   position: fixed;
   inset: 0;
-  z-index: 15;
+  z-index: 250;
   background: rgba(0, 0, 0, 0.2823529412);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3046,7 +3046,7 @@ html {
 .modal__services {
   position: fixed;
   inset: 0;
-  z-index: 15;
+  z-index: 250;
   background: rgba(0, 0, 0, 0.2823529412);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3505,7 +3505,7 @@ html {
 .review__modal {
   position: fixed;
   inset: 0;
-  z-index: 15;
+  z-index: 250;
   background: rgba(0, 0, 0, 0.2823529412);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3743,7 +3743,7 @@ html {
 .map__modal {
   position: fixed;
   inset: 0;
-  z-index: 15;
+  z-index: 250;
   background: rgba(0, 0, 0, 0.2823529412);
   display: -webkit-box;
   display: -ms-flexbox;

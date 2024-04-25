@@ -141,6 +141,7 @@
   opacity: 0;
   transform: translate(0px, -100%);
 
+
   @media(max-width: $max-width-xl) {
     padding: 30px;
     
@@ -190,7 +191,7 @@
 @mixin modalCenter {
   position: fixed;
   inset: 0;
-  z-index: 15;
+  z-index: 250;
   background: $muted;
 
   display: flex;
