@@ -29,13 +29,8 @@
 
 .nav {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 62px;
-
-  @media (max-width: $max-width-m) {
-  gap: 30px;
-  }
+  gap: 60px;
 
   @media (max-width: 1135px) {
     position: fixed;

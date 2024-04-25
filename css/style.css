@@ -584,17 +584,10 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 62px;
-}
-@media (max-width: 576px) {
-  .nav {
-    gap: 30px;
-  }
+  gap: 60px;
 }
 @media (max-width: 1135px) {
   .nav {
