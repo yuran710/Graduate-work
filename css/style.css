@@ -254,31 +254,6 @@ html {
   margin-right: 10px;
 }
 
-@-webkit-keyframes slideDown {
-  from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
 .burger-icon-btn {
   --time: 0.1s;
   --width: 40px;
@@ -614,7 +589,7 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 80px 0;
+    padding: 50px 0;
     -webkit-box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 140;
@@ -639,7 +614,7 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    row-gap: 30px;
+    row-gap: 10px;
   }
   .nav .nav__item {
     margin-right: 0;
